@@ -1,0 +1,183 @@
+# ONE corruption: black plane overlaps yellow (r-black y2→y4)
+id: kunsthaus-1930-rbby
+title: Composition with Red, Blue and Yellow
+year: 1930
+source:
+  collection: Kunsthaus Zürich
+  inventory: 1987/0028
+  catalogueNote: Museum sheet 45×45 cm; RKD 46×46 cm — Kunsthaus preferred for scale.
+canvas:
+  width: 450
+  height: 450
+  unit: mm
+geometry:
+  coordinateSpace: normalized-0-1
+  points:
+    x:
+    - id: x0
+      position: 0.0
+    - id: x1
+      position: 0.242
+    - id: x2
+      position: 0.89
+    - id: x3
+      position: 1.0
+    y:
+    - id: y0
+      position: 0.0
+    - id: y1
+      position: 0.315
+    - id: y2
+      position: 0.722
+    - id: y3
+      position: 0.844
+    - id: y4
+      position: 1.0
+  rectangles:
+  - id: r-w-tl
+    x:
+    - x0
+    - x1
+    y:
+    - y0
+    - y1
+    role: white
+  - id: r-w-ml
+    x:
+    - x0
+    - x1
+    y:
+    - y1
+    - y2
+    role: white
+  - id: r-blue
+    x:
+    - x0
+    - x1
+    y:
+    - y2
+    - y4
+    role: blue
+  - id: r-red
+    x:
+    - x1
+    - x3
+    y:
+    - y0
+    - y2
+    role: red
+  - id: r-w-bc
+    x:
+    - x1
+    - x2
+    y:
+    - y2
+    - y4
+    role: white
+  - id: r-black
+    x:
+    - x2
+    - x3
+    y:
+    - y2
+    - y4
+    role: black
+  - id: r-yellow
+    x:
+    - x2
+    - x3
+    y:
+    - y3
+    - y4
+    role: yellow
+  lines:
+  - id: lv1
+    orientation: v
+    center: x1
+    extent:
+    - y0
+    - y4
+    thickness: 0.032
+  - id: lv2
+    orientation: v
+    center: x2
+    extent:
+    - y2
+    - y4
+    thickness: 0.017
+  - id: lh1
+    orientation: h
+    center: y1
+    extent:
+    - x0
+    - x1
+    thickness: 0.02
+  - id: lh2
+    orientation: h
+    center: y2
+    extent:
+    - x0
+    - x3
+    thickness: 0.03
+  - id: lh3
+    orientation: h
+    center: y3
+    extent:
+    - x2
+    - x3
+    thickness: 0.016
+provenance:
+  method: hand
+  measured_by: instructor
+  date: '2026-10-29'
+  reproduction:
+    source: https://upload.wikimedia.org/wikipedia/commons/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg
+    px_w: 5918
+    px_h: 6000
+    crop:
+      x0: 0
+      y0: 0
+      x1: 5918
+      y1: 6000
+  review:
+    status: proposal
+rights:
+  eu: Piet Mondrian d. 1944 — EU public domain
+  us: study-after SVG geometry; photograph not distributed (D-32)
+  checked_by: instructor
+  date: '2026-10-26'
+  credit: Study after Piet Mondrian, Composition with Red, Blue and Yellow, 1930 (Kunsthaus
+    Zürich)
+uncertainty:
+  method: luminance rail detection on Commons JPEG downsample (800px max); thr black
+    lum<55
+  position_sigma: 0.008
+  thickness_sigma: 0.004
+  notes: Provisional M2 measurement; refine after wall-clock re-measure. Partial lines
+    extents from contiguous black runs.
+swatches:
+  red:
+    measured:
+      h: 8
+      s: 82
+      l: 48
+  yellow:
+    measured:
+      h: 48
+      s: 88
+      l: 55
+  blue:
+    measured:
+      h: 220
+      s: 70
+      l: 38
+  black:
+    measured:
+      h: 0
+      s: 0
+      l: 8
+  white:
+    measured:
+      h: 0
+      s: 0
+      l: 96

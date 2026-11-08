@@ -17,8 +17,7 @@ export function vary(work, variationId) {
     case "invert-contrast":
       return invertContrast(work);
     default:
-      // Weight ops loaded from catalog artefacts — identity here
-      return structuredClone(work);
+      throw new Error(`unknown or omitted MVP variation: ${variationId}`);
   }
 }
 

@@ -1,7 +1,7 @@
 <!--
 Mondrian Project — cascade pack index (two faces: product owner / technical director).
 Author: Rubén Vega Balbás, PhD · 25 October 2026 · amended 27 October 2026
-  (D-21…D-32; M0 DONE; M1 DONE; M2 READY).
+  (D-21…D-32; M0 DONE; M1 DONE; M2 DONE 8 Nov 2026).
   Amended 28 October 2026: flag quote 1920 + teach-next.
 Canonical home: product repo docs/DEV_PLAN/MONDRIAN/ (moved at M1).
 Forge pointer: web-atelier-udit/frontend-pedagogy/forge/mondrian-project/INDEX.md
@@ -27,8 +27,8 @@ Full anchor + expansion: [`grounding/FLAG-QUOTE-1920.md`](grounding/FLAG-QUOTE-1
 | | |
 | --- | --- |
 | **Open with** | Flag quote on the board (French) + imprint · one sentence: *rapports* = the ratios the app liquid-fills |
-| **Programme step** | **M2 READY** — start contracts (`PHASE-M2.md`): schema · SVG+Grid plan · first catalog work |
-| **Do not start** | M3–M9 (blocked on M2); do not invent `(Mondrian 1920)` author-date |
+| **Programme step** | **M2 DONE** — contracts frozen; next paste is `PHASE-M3.md` (product shell) |
+| **Do not start** | M6 editor island before M3 shell; do not invent `(Mondrian 1920)` author-date |
 | **Live demo** | https://ruvebal.github.io/mondrian-project/ · all 7 seats on [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) (5–7 provisional draw) |
 | **If time left** | Seat 1–2 skim Andrzejewski grounding; Seat 3 hears flag → About scene spine |
 
@@ -80,13 +80,13 @@ Closing: each phase → VERIFYING → `PHASE-Mn-COLD-REVIEW.md` → amend if nee
 | --- | --- | --- |
 | M0 | Decisions ratified, probes, private communications, reference works + rights | **DONE** (27 Oct 2026 — owner flip after F1–F6 triage) |
 | M1 | Repo from `git init`, Astro 7 + Svelte probe, `packages/editor`, CI/Pages, Git/PR/AI contract (D-25 CODEOWNERS) | **DONE** (27 Oct 2026 — cold FAIL F1–F3 triage closed; owner flip) |
-| M2 | Andrzejewski primitives, SVG+Grid render plan, catalog generator, surface/state/`variationId`, conformance, reference work | **VERIFYING** ([handoff](PHASE-M2-HANDOFF.md)) |
-| M3 | Product shell, gallery CSS Grid miniatures, About story/About Us/method | BLOCKED (M2) |
-| M4 | Classical analyzer + line weights + evaluation (Python lane) | BLOCKED (M2) |
-| M5 | API JSON + HTML/CSS and SVG preview; no public runtime calls | BLOCKED (M2; M4 for `/analyze`) |
+| M2 | Andrzejewski primitives, SVG+Grid render plan, catalog generator, surface/state/`variationId`, conformance, reference work | **DONE** (8 Nov 2026 — [`REPORT`](PHASE-M2-REPORT.md) · [`COLD`](PHASE-M2-COLD-REVIEW.md)) |
+| M3 | Product shell, gallery CSS Grid miniatures, About story/About Us/method | **READY** |
+| M4 | Classical analyzer + line weights + evaluation (Python lane) | READY (parallel) |
+| M5 | API JSON + HTML/CSS and SVG preview; no public runtime calls | BLOCKED (M4 for `/analyze`) |
 | M6 | Svelte+SVG editor: frame, catalog variations, export, calibrated print | BLOCKED (M3) |
 | M7 | Kiosk/PWA + QR handoff + real touch device | BLOCKED (M6) |
-| M8 | Corpus: references 2–3 + one work per student (parallel lane) | BLOCKED (M2) |
+| M8 | Corpus: references 2–3 + one work per student (parallel lane) | READY (parallel) |
 | M9 | Declaration, pseudonymisation, defence, brief EN/ES, dataset, abstract | BLOCKED (M7, M8) |
 
 ## Trigger readiness (28 Oct 2026 — evening; teach 29 Oct)
@@ -102,7 +102,7 @@ Closing: each phase → VERIFYING → `PHASE-Mn-COLD-REVIEW.md` → amend if nee
 | Live Pages | https://ruvebal.github.io/mondrian-project/ → **200** |
 | M0 | **DONE** |
 | M1 | **DONE** — `main` protected; F1–F3 closed; letters remain ops (non-blocking) |
-| M2 | **VERIFYING** — handoff filed; cold review next |
+| M2 | **DONE** — cold FAIL F1–F5 triage closed; M3 READY |
 
 ## Live snapshot (27 Oct 2026 — M0 DONE; M1 DONE)
 

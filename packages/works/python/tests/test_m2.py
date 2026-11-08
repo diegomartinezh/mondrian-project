@@ -49,6 +49,9 @@ def test_vary_involution() -> None:
 
 def test_catalog(tmp_path: Path) -> None:
     paths = write_catalog(VALID, tmp_path)
-    assert len(paths) >= 18
+    # 5 MVP variations × (json + svg)
+    assert len(paths) == 10
     data = json.loads((tmp_path / f"{VALID['id']}.json").read_text())
     assert data["coordinateSpace"] == "normalized-0-1"
+    stems = {p.name for p in paths}
+    assert f"{VALID['id']}--invert-rank.json" not in stems

@@ -9,16 +9,15 @@ from typing import Any
 from .derive import derive_render_plan
 from .vary import vary
 
+# MVP catalog: geometric + invert-contrast only. Weight remaps
+# (invert-rank/complement/reciprocal/equalize) omitted until closed-form
+# area rewrite is documented (PHASE-M2 prompt: no invented proportions).
 VARIATIONS = [
     "original",
     "mirror-h",
     "mirror-v",
     "rotate-180",
     "invert-contrast",
-    "invert-rank",
-    "complement",
-    "reciprocal",
-    "equalize",
 ]
 
 

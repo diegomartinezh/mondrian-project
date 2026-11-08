@@ -1,7 +1,7 @@
 # PHASE-M8: Corpus — one measured work per student, reviewed, rights-checked
 
 > **Track:** L1 corpus. **Parallel lane** from M2 DONE to the end of term. Every student, every lane.
-> **Status:** BLOCKED (M2 DONE)
+> **Status:** READY — M2 DONE (8 Nov 2026); parallel corpus lane may open
 
 ## Goal
 
