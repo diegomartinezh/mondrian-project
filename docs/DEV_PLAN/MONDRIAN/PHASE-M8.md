@@ -1,7 +1,7 @@
 # PHASE-M8: Corpus — one measured work per student, reviewed, rights-checked
 
 > **Track:** L1 corpus. **Parallel lane** from M2 DONE to the end of term. Every student, every lane.
-> **Status:** READY — M2 DONE (8 Nov 2026); parallel corpus lane may open
+> **Status:** READY / OPEN — CORPUS index + issue seeds 9 Nov 2026; cohort measures. See [`PHASE-M8-SCAFFOLD.md`](PHASE-M8-SCAFFOLD.md).
 
 ## Goal
 

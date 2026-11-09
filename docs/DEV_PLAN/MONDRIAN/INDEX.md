@@ -27,8 +27,8 @@ Full anchor + expansion: [`grounding/FLAG-QUOTE-1920.md`](grounding/FLAG-QUOTE-1
 | | |
 | --- | --- |
 | **Open with** | Flag quote on the board (French) + imprint · one sentence: *rapports* = the ratios the app liquid-fills |
-| **Programme step** | **M2 DONE** — contracts frozen; next paste is `PHASE-M3.md` (product shell) |
-| **Do not start** | M6 editor island before M3 shell; do not invent `(Mondrian 1920)` author-date |
+| **Programme step** | **M3 scaffold DONE** — Wave A seats polish shell; M4/M8 OPEN for cohort |
+| **Do not start** | Instructor agent finishing seat-graded analyzer/measurements; do not invent `(Mondrian 1920)` author-date |
 | **Live demo** | https://ruvebal.github.io/mondrian-project/ · all 7 seats on [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) (5–7 provisional draw) |
 | **If time left** | Seat 1–2 skim Andrzejewski grounding; Seat 3 hears flag → About scene spine |
 
@@ -46,7 +46,7 @@ Full anchor + expansion: [`grounding/FLAG-QUOTE-1920.md`](grounding/FLAG-QUOTE-1
 | Liquid frame refactor | [`DECISIONS/D30-2026-10-27-LIQUID-FRAME-REFACTOR.md`](DECISIONS/D30-2026-10-27-LIQUID-FRAME-REFACTOR.md) | Free-aspect corners; pattern **liquid-fills** the frame (same fractions → new Mondrian). Supersedes preserve-ratio MVP. |
 | Format aspect presets | [`DECISIONS/D31-2026-10-27-FORMAT-ASPECT-PRESETS.md`](DECISIONS/D31-2026-10-27-FORMAT-ASPECT-PRESETS.md) | Aspect chips + maximise-in-paper; game = texture → format → variations → version. |
 | SVG study ≠ photo | [`DECISIONS/D32-2026-10-27-SVG-STUDY-NOT-PHOTO.md`](DECISIONS/D32-2026-10-27-SVG-STUDY-NOT-PHOTO.md) | Distributed artefact = measured SVG study, not museum photo; composition rights still per-work. |
-| Cohort seats | [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) · handout [`STUDENT-ASSIGNMENT-LIST.md`](STUDENT-ASSIGNMENT-LIST.md) | Seats 1–2 backend, 3–5 storytelling, 6–7 app UI; student task specs; CODEOWNERS mapping; wave A/B/C handout. |
+| Cohort seats | [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) · [`STUDENT-ASSIGNMENT-LIST.md`](STUDENT-ASSIGNMENT-LIST.md) · [`ISSUE-SEEDS.md`](ISSUE-SEEDS.md) | Seats 1–7; waves; paste-ready issue titles. |
 | Technical director | [`MONDRIAN-CASCADE.md`](MONDRIAN-CASCADE.md) | D-01…D-32, ordered programme with falsifiable gates, master paste, hard constraints, layer map, closing protocol, resume rule, amendments to the pitch, repository layout. |
 | Private correspondence | `_private/` (gitignored; forge only) | Student preflight and department/ECSIT emails. Only status/dates enter tracked reports; addresses, replies and signed material remain private. |
 | Grounding | [`FLAG-QUOTE-1920`](grounding/FLAG-QUOTE-1920.md) · [`FIRST-SOURCES-1920`](grounding/FIRST-SOURCES-1920-NEOPLASTICISM.md) · [`ANDRZEJEWSKI-2010`](grounding/ANDRZEJEWSKI-2010.md) · [`JSON`](grounding/ANDRZEJEWSKI-2010.json) · [`prior-art`](grounding/PRIOR-ART-DISCOVERY.md) · [`corpus overnight`](grounding/CORPUS-OVERNIGHT.md) · [`GraphRAG queries`](grounding/GRAPHRAG-PHASE-QUERIES.md) · [`About value`](grounding/ABOUT-MONDRIAN-VALUE.md) | Flag quote + 1920 imprint; Andrzejewski geometry; overnight voice corpus under Athanor slug `mondrian-project`. |
@@ -81,12 +81,12 @@ Closing: each phase → VERIFYING → `PHASE-Mn-COLD-REVIEW.md` → amend if nee
 | M0 | Decisions ratified, probes, private communications, reference works + rights | **DONE** (27 Oct 2026 — owner flip after F1–F6 triage) |
 | M1 | Repo from `git init`, Astro 7 + Svelte probe, `packages/editor`, CI/Pages, Git/PR/AI contract (D-25 CODEOWNERS) | **DONE** (27 Oct 2026 — cold FAIL F1–F3 triage closed; owner flip) |
 | M2 | Andrzejewski primitives, SVG+Grid render plan, catalog generator, surface/state/`variationId`, conformance, reference work | **DONE** (8 Nov 2026 — [`REPORT`](PHASE-M2-REPORT.md) · [`COLD`](PHASE-M2-COLD-REVIEW.md)) |
-| M3 | Product shell, gallery CSS Grid miniatures, About story/About Us/method | **IN_PROGRESS** (9 Nov 2026) |
-| M4 | Classical analyzer + line weights + evaluation (Python lane) | READY (parallel) |
+| M3 | Product shell, gallery CSS Grid miniatures, About story/About Us/method | **DONE (scaffold)** 9 Nov 2026 — Wave A polish = seats 3–5/7 |
+| M4 | Classical analyzer + line weights + evaluation (Python lane) | **OPEN** scaffold ([`PHASE-M4-SCAFFOLD`](PHASE-M4-SCAFFOLD.md)) |
 | M5 | API JSON + HTML/CSS and SVG preview; no public runtime calls | BLOCKED (M4 for `/analyze`) |
-| M6 | Svelte+SVG editor: frame, catalog variations, export, calibrated print | BLOCKED (M3) |
+| M6 | Svelte+SVG editor: frame, catalog variations, export, calibrated print | **READY** (shell scaffold DONE; seat 6) |
 | M7 | Kiosk/PWA + QR handoff + real touch device | BLOCKED (M6) |
-| M8 | Corpus: references 2–3 + one work per student (parallel lane) | READY (parallel) |
+| M8 | Corpus: references 2–3 + one work per student (parallel lane) | **OPEN** scaffold ([`PHASE-M8-SCAFFOLD`](PHASE-M8-SCAFFOLD.md)) |
 | M9 | Declaration, pseudonymisation, defence, brief EN/ES, dataset, abstract | BLOCKED (M7, M8) |
 
 ## Trigger readiness (28 Oct 2026 — evening; teach 29 Oct)

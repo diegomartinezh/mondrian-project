@@ -1,7 +1,7 @@
 # PHASE-M4: Analyzer — image to source primitives, with provenance and evaluation
 
 > **Track:** L4 (Python). Parallel lane with M3/M6 once M2 is DONE. Owned by the Analyzer & API lane.
-> **Status:** READY — M2 DONE (8 Nov 2026); parallel Python lane may open
+> **Status:** READY / OPEN — scaffold CLI contract landed 9 Nov 2026; seat 1 implements pipeline. See [`PHASE-M4-SCAFFOLD.md`](PHASE-M4-SCAFFOLD.md).
 
 ## Goal
 
