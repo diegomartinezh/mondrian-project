@@ -1,14 +1,14 @@
 [project]
 name = "mondrian-analyzer"
 version = "0.0.0"
-description = "Classical analyzer (M4 — seat 1 implements pipeline; scaffold has CLI contract)"
+description = "Neoplastix classical analyzer (M4 — seat 1 implements pipeline; scaffold has CLI contract)"
 requires-python = "==3.12.*"
 dependencies = [
   "typer>=0.12",
 ]
 
 [project.scripts]
-mondrian-analyzer = "mondrian_analyzer.cli:app"
+neoplastix-analyzer = "mondrian_analyzer.cli:app"
 
 [build-system]
 requires = ["hatchling"]
