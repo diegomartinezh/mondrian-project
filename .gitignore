@@ -36,3 +36,5 @@ services/web/public/patterns/*
 # Private / local
 _private/
 *.private.json
+services/web/test-results/
+services/web/playwright-report/
