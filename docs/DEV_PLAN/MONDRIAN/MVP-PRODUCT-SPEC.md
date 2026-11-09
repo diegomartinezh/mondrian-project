@@ -6,7 +6,7 @@ Wins over PITCH.md, MONDRIAN-RATIONALE.md, and phase files when they differ.
 Canonical blend: DECISIONS/D21-D25-… · D-26…D-31 (print, URL, liquid-fill, format)
 -->
 
-# Liquid Mondrian — MVP product specification
+# Neoplastix — MVP product specification
 
 **Status:** adopted product definition. Amended 27 Oct 2026 for Astro +
 Svelte island + SVG canvas, build-time Python catalog, Addendum B

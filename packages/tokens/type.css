@@ -11,4 +11,16 @@
 
   --mp-leading-tight: 1.2;
   --mp-leading-normal: 1.5;
+
+  /* D-33 Neoplastix aliases */
+  --nx-font-sans: var(--mp-font-sans);
+  --nx-font-mono: var(--mp-font-mono);
+  --nx-font-display: var(--mp-font-display);
+  --nx-text-xs: var(--mp-text-xs);
+  --nx-text-sm: var(--mp-text-sm);
+  --nx-text-md: var(--mp-text-md);
+  --nx-text-lg: var(--mp-text-lg);
+  --nx-text-xl: var(--mp-text-xl);
+  --nx-leading-tight: var(--mp-leading-tight);
+  --nx-leading-normal: var(--mp-leading-normal);
 }

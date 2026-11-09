@@ -7,6 +7,7 @@ Amended 29 Oct 2026: seats 5–7 random draw (reorder later if needed).
 
 # Team assignments — cohort of 7
 
+**Product marque:** Neoplastix · **Programme:** Mondrian Project · [`D-33`](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)  
 **Product contract:** [`MVP-PRODUCT-SPEC.md`](MVP-PRODUCT-SPEC.md)  
 **Stack amend:** [`DECISIONS/D21-D25-2026-10-27-ASTRO-SVELTE-SVG-MVP.md`](DECISIONS/D21-D25-2026-10-27-ASTRO-SVELTE-SVG-MVP.md)  
 **Export / QR / generative:** [`DECISIONS/D26-2026-10-27-EXPORT-QR-GENERATIVE.md`](DECISIONS/D26-2026-10-27-EXPORT-QR-GENERATIVE.md)  

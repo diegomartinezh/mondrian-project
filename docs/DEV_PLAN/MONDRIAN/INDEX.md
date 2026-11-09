@@ -28,8 +28,9 @@ Full anchor + expansion: [`grounding/FLAG-QUOTE-1920.md`](grounding/FLAG-QUOTE-1
 | --- | --- |
 | **Open with** | Flag quote on the board (French) + imprint · one sentence: *rapports* = the ratios the app liquid-fills |
 | **Programme step** | **M3 scaffold DONE** — Wave A seats polish shell; M4/M8 OPEN for cohort |
+| **Product marque** | **Neoplastix** ([D-33](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)) · programme remains Mondrian Project · canonical `https://neoplastix.crea-comm.net` (live = github.io until cutover) |
 | **Do not start** | Instructor agent finishing seat-graded analyzer/measurements; do not invent `(Mondrian 1920)` author-date |
-| **Live demo** | https://ruvebal.github.io/mondrian-project/ · all 7 seats on [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) (5–7 provisional draw) |
+| **Live demo** | https://ruvebal.github.io/mondrian-project/ (legacy path; Neoplastix chrome) · seats on [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) |
 | **If time left** | Seat 1–2 skim Andrzejewski grounding; Seat 3 hears flag → About scene spine |
 
 ## How to read this pack
@@ -46,6 +47,7 @@ Full anchor + expansion: [`grounding/FLAG-QUOTE-1920.md`](grounding/FLAG-QUOTE-1
 | Liquid frame refactor | [`DECISIONS/D30-2026-10-27-LIQUID-FRAME-REFACTOR.md`](DECISIONS/D30-2026-10-27-LIQUID-FRAME-REFACTOR.md) | Free-aspect corners; pattern **liquid-fills** the frame (same fractions → new Mondrian). Supersedes preserve-ratio MVP. |
 | Format aspect presets | [`DECISIONS/D31-2026-10-27-FORMAT-ASPECT-PRESETS.md`](DECISIONS/D31-2026-10-27-FORMAT-ASPECT-PRESETS.md) | Aspect chips + maximise-in-paper; game = texture → format → variations → version. |
 | SVG study ≠ photo | [`DECISIONS/D32-2026-10-27-SVG-STUDY-NOT-PHOTO.md`](DECISIONS/D32-2026-10-27-SVG-STUDY-NOT-PHOTO.md) | Distributed artefact = measured SVG study, not museum photo; composition rights still per-work. |
+| Neoplastix marque | [`DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md`](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md) | Visitor product = Neoplastix; programme/repo stay Mondrian Project this AY; Athanor slug unchanged. |
 | Cohort seats | [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) · [`STUDENT-ASSIGNMENT-LIST.md`](STUDENT-ASSIGNMENT-LIST.md) · [`ISSUE-SEEDS.md`](ISSUE-SEEDS.md) | Seats 1–7; waves; paste-ready issue titles. |
 | Technical director | [`MONDRIAN-CASCADE.md`](MONDRIAN-CASCADE.md) | D-01…D-32, ordered programme with falsifiable gates, master paste, hard constraints, layer map, closing protocol, resume rule, amendments to the pitch, repository layout. |
 | Private correspondence | `_private/` (gitignored; forge only) | Student preflight and department/ECSIT emails. Only status/dates enter tracked reports; addresses, replies and signed material remain private. |

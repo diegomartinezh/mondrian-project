@@ -42,7 +42,7 @@ Use when one line needs the geometry claim behind the flag:
 | Nodes | `78ad4e44-dbbd-57d1-8a90-59c75e7d4de3` → `06184a3b-fb54-58aa-826a-78eae35c89a6` |
 | `page_index` | `7` |
 
-**Why this flag for Liquid Mondrian:** rectangular colour planes · **rapports** (ratios) not natural appearance · aesthetic **équilibre** — the same spine as liquid-fill frame, catalog variations, and SVG/Grid from one plan.
+**Why this flag for Neoplastix:** rectangular colour planes · **rapports** (ratios) not natural appearance · aesthetic **équilibre** — the same spine as liquid-fill frame, catalog variations, and SVG/Grid from one plan.
 
 ## Where it lands
 

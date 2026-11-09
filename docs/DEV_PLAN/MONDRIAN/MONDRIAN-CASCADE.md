@@ -77,8 +77,11 @@ Each row is an ADR in one line. M0 recorded each as `ratified` or `rejected` wit
 **Decision status (27 Oct 2026 — owner amend, pre-M1):** D-31 **`adopted`**. Evidence: [`DECISIONS/D31-2026-10-27-FORMAT-ASPECT-PRESETS.md`](DECISIONS/D31-2026-10-27-FORMAT-ASPECT-PRESETS.md).
 
 | **D-32 SVG study ≠ photo** | Public artefact = measured SVG / Grid **study after** the work; never museum photos. Improves photo-rights posture; composition rights still per-work (EU PD Mondrian MVP; siblings may stay pending). | Pitch §13 + owner clarification 27 Oct. | US or estate claim on a specific study → pull that slug from Pages until cleared. |
+| **D-33 Neoplastix marque** | Visitor product = **Neoplastix** (canonical `https://neoplastix.crea-comm.net`; live = github.io until cutover). Programme/repo remain **Mondrian Project** / `ruvebal/mondrian-project` this AY. Athanor slug `mondrian-project` unchanged. Vanity `.io`/`.art` deferred. | Owner §9 locks 9 Nov 2026; D4 amended same day. | DNS/host cutover or `@neoplastix` scope wait on human / Wave A. |
 
 **Decision status (27 Oct 2026 — owner amend):** D-32 **`adopted`**. Evidence: [`DECISIONS/D32-2026-10-27-SVG-STUDY-NOT-PHOTO.md`](DECISIONS/D32-2026-10-27-SVG-STUDY-NOT-PHOTO.md). Product repo already exists (`ruvebal/mondrian-project`); keep cascade docs in sync there.
+
+**Decision status (9 Nov 2026 — owner):** D-33 **`adopted`**. Evidence: [`DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md`](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md).
 
 ---
 

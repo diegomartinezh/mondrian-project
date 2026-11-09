@@ -2,7 +2,7 @@
   "name": "mondrian-project",
   "private": true,
   "version": "0.0.0",
-  "description": "Liquid Mondrian — cohort monorepo (FE I 2026–27)",
+  "description": "Neoplastix (Mondrian Project cohort) — FE I 2026–27",
   "packageManager": "pnpm@10.30.0",
   "engines": {
     "node": ">=24.22.1"

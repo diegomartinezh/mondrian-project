@@ -1,4 +1,4 @@
-# PHASE-M6: Liquid Mondrian editor — Svelte island, SVG canvas, catalog variations, save and print
+# PHASE-M6: Neoplastix editor — Svelte island, SVG canvas, catalog variations, save and print
 
 > **Track:** L2b editor island + L3 `/create/`. Owned by the Editor, Print & Kiosk lane.
 > **Status:** BLOCKED (M3 DONE)

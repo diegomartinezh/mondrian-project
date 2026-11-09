@@ -13,6 +13,10 @@
 > backgrounds from Q-FA1 live under [`assets/mondrian-tree/`](assets/mondrian-tree/)
 > (and `web-foundations/docs/assets/images/mondrian-tree/`). They are early-tree
 > prologue studies after Bountis et al. (2017)—not the neoplastic matrix (§5).
+>
+> **Naming (9 Nov 2026):** visitor marque is **Neoplastix** ([D-33](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)).
+> In this pitch, **Liquid** means the **Jekyll templating language** (§1, §9), not
+> the retired “Liquid Mondrian” product name. Stack is Astro (cascade §7), not Jekyll.
 
 **Course:** Front-End I, semester 1 integrator. Alternative to the portfolio-template assignment (session 13, three grade levels).
 

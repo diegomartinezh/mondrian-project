@@ -1,8 +1,9 @@
 # Mondrian Project
 
-A cohort-built touch web app: measure neoplastic compositions after Mondrian, reframe them (liquid fill), apply mathematical variations, and take a personal version away as URL, print, or file. Front-End I integrator for UDIT 2026–27.
+**Product:** [Neoplastix](docs/DEV_PLAN/MONDRIAN/DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md) — cohort-built touch web app: measure neoplastic compositions after Mondrian, liquid-fill a frame, apply mathematical variations, and take a personal version away as URL, print, or file. Front-End I integrator for UDIT 2026–27.
 
-**Live site:** https://ruvebal.github.io/mondrian-project/  
+**Live site (until cutover):** https://ruvebal.github.io/mondrian-project/  
+**Canonical domain (medium-term):** https://neoplastix.crea-comm.net/  
 **Repository:** https://github.com/ruvebal/mondrian-project
 
 > La Plastique nouvelle met ses rapports en équilibre esthétique et exprime par là l'harmonie nouvelle.  

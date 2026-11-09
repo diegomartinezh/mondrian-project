@@ -17,6 +17,20 @@
   --mp-role-blue: hsl(220 80% 45%);
   --mp-role-black: hsl(0 0% 8%);
   --mp-role-white: hsl(0 0% 98%);
+
+  /* D-33 Neoplastix aliases — prefer --nx-* in new CSS; --mp-* kept this term */
+  --nx-color-canvas: var(--mp-color-canvas);
+  --nx-color-ink: var(--mp-color-ink);
+  --nx-color-muted: var(--mp-color-muted);
+  --nx-color-line: var(--mp-color-line);
+  --nx-color-focus: var(--mp-color-focus);
+  --nx-color-danger: var(--mp-color-danger);
+  --nx-color-ok: var(--mp-color-ok);
+  --nx-role-red: var(--mp-role-red);
+  --nx-role-yellow: var(--mp-role-yellow);
+  --nx-role-blue: var(--mp-role-blue);
+  --nx-role-black: var(--mp-role-black);
+  --nx-role-white: var(--mp-role-white);
 }
 
 @media (prefers-color-scheme: dark) {

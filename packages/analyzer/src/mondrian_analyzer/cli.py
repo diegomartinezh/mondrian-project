@@ -14,7 +14,7 @@ import typer
 
 app = typer.Typer(
     add_completion=False,
-    help="Mondrian classical analyzer (M4). Scaffold stub — implement in seat 1.",
+    help="Neoplastix classical analyzer (M4). Scaffold stub — implement in seat 1.",
 )
 
 
@@ -36,7 +36,7 @@ def analyze(
         json.dumps(
             {
                 "status": "scaffold",
-                "message": "Seat 1 implements classical analyze per PHASE-M4.md",
+                "message": "Seat 1 implements classical analyze per PHASE-M4.md (neoplastix-analyzer)",
                 "image": image,
                 "id": id,
                 "title": title,

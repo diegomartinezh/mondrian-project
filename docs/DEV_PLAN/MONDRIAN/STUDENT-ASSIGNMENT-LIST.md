@@ -5,7 +5,9 @@ Distilled from TEAM-ASSIGNMENTS.md · 9 November 2026
 
 # Student assignment list — cohort of 7
 
-**Product marque:** Liquid Mondrian · **Programme:** Mondrian Project  
+**Product marque:** Neoplastix · **Programme / repo:** Mondrian Project (`ruvebal/mondrian-project`)  
+**Canonical domain (medium-term):** https://neoplastix.crea-comm.net · **Live now:** https://ruvebal.github.io/mondrian-project/  
+**Naming ADR:** [`DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md`](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)  
 **Source of truth for seat IDs:** [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md)  
 **Not this file:** EN/ES student brief → **M9** only.
 
@@ -13,10 +15,11 @@ Distilled from TEAM-ASSIGNMENTS.md · 9 November 2026
 
 | Item | State |
 | --- | --- |
-| M2 / M3 scaffold | **On `main`** (#3, #5) — shell runnable |
+| M2 / M3 scaffold | **On `main`** (#3, #5, #6) — shell runnable |
 | Wave A polish | **Your seats** — see [`ISSUE-SEEDS.md`](ISSUE-SEEDS.md) |
 | M4 / M8 | **OPEN** for seats 1 + everyone — scaffold only |
-| Plans / PRs | Branch from current `main` |
+| Plans / PRs | Branch from current `main` as `lane/<handle>-issue-<n>-<slug>` |
+| Brand freeze | Prefer not to fight instructor PRs on `SiteNav`, `public/brand/*`, layout titles — use **Neoplastix** in new user-facing copy |
 
 ---
 
