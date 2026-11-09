@@ -1,0 +1,63 @@
+---
+import ShellLayout from "../layouts/ShellLayout.astro";
+import { withBase } from "../lib/url";
+
+const base = import.meta.env.BASE_URL;
+const seats = [
+  { seat: 1, handle: "ATIaas", lane: "Analyzer" },
+  { seat: 2, handle: "diegomartinezh", lane: "API + contract" },
+  { seat: 3, handle: "medinaxd29", lane: "About story" },
+  { seat: 4, handle: "Yassin-Skirej", lane: "Gallery & method" },
+  { seat: 5, handle: "itzy-4Qunn7", lane: "About-us / contribute" },
+  { seat: 6, handle: "galarp2005", lane: "Editor" },
+  { seat: 7, handle: "PauLAanDReEa-Ai", lane: "Export / PWA / tokens" },
+];
+---
+<ShellLayout title="About us — Liquid Mondrian" current="about-us">
+  <article class="prose">
+    <h1>About us</h1>
+    <p class="lede">
+      Liquid Mondrian is the Front-End I 2026–27 semester integrator at UDIT /
+      ECSIT — a cohort product, not a portfolio template.
+    </p>
+
+    <h2>Proposition</h2>
+    <p>
+      A neoplastic composition is a set of ratios. Students measure those ratios
+      into data; visitors liquid-fill a frame, apply variations, and take a
+      personal version away as URL, print or file. The professor proposes the
+      spine; the cohort owns lanes of the monorepo.
+    </p>
+
+    <h2>Cohort seats</h2>
+    <ol>
+      {
+        seats.map((s) => (
+          <li>
+            <strong>Seat {s.seat}</strong> — {s.lane} (
+            <a href={`https://github.com/${s.handle}`}>{s.handle}</a>)
+          </li>
+        ))
+      }
+    </ol>
+    <p>
+      Path ownership and task IDs:
+      <a href={withBase("/contribute/", base)}>How to contribute</a>.
+    </p>
+
+    <h2>Research framing</h2>
+    <p>
+      Teaching continues under the same Strand B ethics terms used for Tao of
+      Development: disclosed assistance, process defence, and analysis that does
+      not wait on a new dictamen for the stated scope. Research use of traces is
+      separable from grading.
+    </p>
+
+    <h2>AI disclosure</h2>
+    <p>
+      Assisted pull requests carry an AI Review Log. Local models may comment;
+      they never approve or merge. The shared oral-defence rubric remains the
+      only summative instrument.
+    </p>
+  </article>
+</ShellLayout>

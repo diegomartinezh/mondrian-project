@@ -1,7 +1,7 @@
 # PHASE-M3: Product shell — start, gallery, About story, About Us, method
 
 > **Track:** L3 site (public). Consumes L0–L2 unchanged.
-> **Status:** READY — M2 DONE (8 Nov 2026); open this phase next
+> **Status:** IN_PROGRESS — public shell implementation (9 Nov 2026); M2 DONE on main
 
 ## Goal
 

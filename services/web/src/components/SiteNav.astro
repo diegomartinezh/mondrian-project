@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import { withBase } from "../lib/url";
+
+interface Props {
+  current?: string;
+}
+
+const { current = "" } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const works = await getCollection("works");
+
+const links = [
+  { href: "/", id: "home", label: "Home" },
+  { href: "/gallery/", id: "gallery", label: "Gallery" },
+  { href: "/about/", id: "about", label: "About" },
+  { href: "/about-us/", id: "about-us", label: "About us" },
+  { href: "/method/", id: "method", label: "Method" },
+  { href: "/contribute/", id: "contribute", label: "Contribute" },
+];
+
+const firstWork = works[0]?.data?.id;
+---
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="shell-header">
+  <a class="brand" href={withBase("/", base)}>Liquid Mondrian</a>
+  <nav aria-label="Primary">
+    <ul class="shell-nav">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={withBase(link.href, base)}
+              aria-current={current === link.id ? "page" : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+      {
+        firstWork && (
+          <li>
+            <a href={withBase(`/create/${firstWork}/`, base)}>Create (soon)</a>
+          </li>
+        )
+      }
+    </ul>
+  </nav>
+</header>

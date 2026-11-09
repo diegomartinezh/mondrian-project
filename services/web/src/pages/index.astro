@@ -4,6 +4,8 @@ import { withBase } from "../lib/url";
 
 const base = import.meta.env.BASE_URL;
 const contribute = withBase("/contribute/", base);
+const about = withBase("/about/", base);
+const gallery = withBase("/gallery/", base);
 const heroBg = withBase("/brand/hero-bg.svg", base);
 const wordmark = withBase("/brand/wordmark.svg", base);
 const mark = withBase("/brand/mark.svg", base);
@@ -60,10 +62,9 @@ const liveHref = "https://ruvebal.github.io/mondrian-project/";
           take a personal version — URL, print, or file.
         </p>
         <p class="landing__cta">
-          <a class="btn btn--primary" href={contribute}>How to contribute</a>
-          <a class="btn btn--ghost" href={repoHref} target="_blank" rel="noopener noreferrer">
-            Repository
-          </a>
+          <a class="btn btn--primary" href={gallery}>Open the gallery</a>
+          <a class="btn btn--ghost" href={about}>Know more</a>
+          <a class="btn btn--ghost" href={contribute}>Contribute</a>
         </p>
         <p class="landing__live">
           Live:

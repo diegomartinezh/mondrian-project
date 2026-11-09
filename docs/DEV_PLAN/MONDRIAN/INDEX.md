@@ -81,7 +81,7 @@ Closing: each phase → VERIFYING → `PHASE-Mn-COLD-REVIEW.md` → amend if nee
 | M0 | Decisions ratified, probes, private communications, reference works + rights | **DONE** (27 Oct 2026 — owner flip after F1–F6 triage) |
 | M1 | Repo from `git init`, Astro 7 + Svelte probe, `packages/editor`, CI/Pages, Git/PR/AI contract (D-25 CODEOWNERS) | **DONE** (27 Oct 2026 — cold FAIL F1–F3 triage closed; owner flip) |
 | M2 | Andrzejewski primitives, SVG+Grid render plan, catalog generator, surface/state/`variationId`, conformance, reference work | **DONE** (8 Nov 2026 — [`REPORT`](PHASE-M2-REPORT.md) · [`COLD`](PHASE-M2-COLD-REVIEW.md)) |
-| M3 | Product shell, gallery CSS Grid miniatures, About story/About Us/method | **READY** |
+| M3 | Product shell, gallery CSS Grid miniatures, About story/About Us/method | **IN_PROGRESS** (9 Nov 2026) |
 | M4 | Classical analyzer + line weights + evaluation (Python lane) | READY (parallel) |
 | M5 | API JSON + HTML/CSS and SVG preview; no public runtime calls | BLOCKED (M4 for `/analyze`) |
 | M6 | Svelte+SVG editor: frame, catalog variations, export, calibrated print | BLOCKED (M3) |
