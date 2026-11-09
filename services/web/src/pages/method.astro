@@ -1,0 +1,55 @@
+---
+import ShellLayout from "../layouts/ShellLayout.astro";
+---
+<ShellLayout title="Method — Liquid Mondrian" current="method">
+  <article class="prose">
+    <h1>Method</h1>
+    <p class="lede">
+      How a painting becomes a schema-valid study, a catalog artefact, and a
+      public page — with uncertainty named.
+    </p>
+
+    <h2>1. Measure</h2>
+    <p>
+      An instructor or student records catalogue identity, reproduction pixel
+      size and crop, then places normalized points, coloured rectangles and
+      explicit black lines. Wall time and σ live in <code>MEASUREMENT.md</code>.
+      Review status stays <code>proposal</code> until a second pass accepts it.
+    </p>
+
+    <h2>2. Schema</h2>
+    <p>
+      <code>work.schema.json</code> is the contract. Ajv, zod, JS semantic checks
+      and pydantic must agree on fixtures. Derived tracks are never written back
+      into <code>work.yml</code>.
+    </p>
+
+    <h2>3. Classical geometry (prior art)</h2>
+    <p>
+      The point / rectangle / explicit-line representation adapts Andrzejewski
+      et al. (2010), §3.2 — not the paper’s classifier or generator
+      (Andrzejewski, 2010). Public pages never embed vault node IDs.
+    </p>
+
+    <h2>4. Catalog build</h2>
+    <p>
+      Python emits <code>public/patterns/&lt;id&gt;.json|.svg</code> and MVP
+      geometric variations at build time. Preset buttons load those files; they
+      do not call FastAPI.
+    </p>
+
+    <h2>5. Dual render</h2>
+    <p>
+      One render plan serialises to CSS Grid (gallery / About pedagogy) and SVG
+      (editor / export). Planes sit below lines; thickness comes from derived
+      geometry only.
+    </p>
+
+    <h2>6. Uncertainty and rights</h2>
+    <p>
+      Every published study carries EU and US rights rows and a credit that the
+      artefact is a geometric study after the named work — not a museum
+      photograph (D-32). Incomplete rights keep a work out of the public build.
+    </p>
+  </article>
+</ShellLayout>

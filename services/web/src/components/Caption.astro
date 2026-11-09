@@ -1,0 +1,28 @@
+---
+import type { WorkDoc } from "../lib/work-plan";
+import { captionStats, deltaSentence } from "../lib/work-plan";
+import { wrapTheta } from "@mondrian/matrix";
+
+interface Props {
+  work: WorkDoc;
+  theta?: unknown;
+}
+
+const { work, theta } = Astro.props;
+const stats = captionStats(work);
+const delta = deltaSentence(work, theta);
+const t = wrapTheta(Number(theta) || 0);
+const credit =
+  work.rights.credit ||
+  `Geometric study after ${work.title} (${work.year}). Measurements: ${work.source.collection}.`;
+---
+<figcaption class="study-caption" data-study-caption data-theta={t}>
+  <p>
+    <strong data-partition>{stats.partition}</strong>
+  </p>
+  <p data-delta>{delta.sentence}</p>
+  <p>
+    Rotated colours are the study, not the painting. Non-colours do not rotate.
+  </p>
+  <p data-credit>{credit}</p>
+</figcaption>

@@ -1,0 +1,74 @@
+/* Study frame — CSS Grid from shared render plan */
+
+@scope (.study) {
+  :scope {
+    container-type: size;
+    container-name: study;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: min(70dvh, 36rem);
+    background: color-mix(in srgb, var(--mp-color-ink) 4%, var(--mp-color-canvas));
+  }
+
+  .study__stage {
+    width: min(100%, 100cqi);
+    height: min(100%, 100cqb);
+    display: grid;
+    place-items: center;
+    padding: 0.75rem;
+  }
+
+  .study__paper {
+    aspect-ratio: var(--paper-ratio, 1);
+    width: min(100%, calc(var(--paper-ratio, 1) * 100cqb));
+    height: auto;
+    max-height: 100%;
+    background: #fff;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--mp-color-ink) 18%, transparent);
+    container-type: size;
+    container-name: paper;
+    position: relative;
+  }
+
+  .study__frame {
+    position: absolute;
+    inset: var(--frame-inset, 4%);
+    display: grid;
+    --theta: 0deg;
+  }
+
+  .study__grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .plane,
+  .line {
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+.study-caption {
+  max-width: 42rem;
+  margin: 1rem auto 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--mp-color-muted);
+}
+
+.study-caption strong {
+  color: var(--mp-color-ink);
+  font-weight: 500;
+}
+
+.gallery-mini .study {
+  min-height: 12rem;
+}
+
+.gallery-mini .study__paper {
+  width: 100%;
+}

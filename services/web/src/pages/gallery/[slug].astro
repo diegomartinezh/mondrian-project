@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import ShellLayout from "../../layouts/ShellLayout.astro";
+import Frame from "../../components/Frame.astro";
+import Caption from "../../components/Caption.astro";
+import { safeWorkJson } from "../../lib/work-plan";
+import type { WorkDoc } from "../../lib/work-plan";
+import { withBase } from "../../lib/url";
+
+export async function getStaticPaths() {
+  const works = await getCollection("works");
+  return works.map((entry) => ({
+    params: { slug: entry.data.id },
+    props: { work: entry.data as WorkDoc },
+  }));
+}
+
+interface Props {
+  work: WorkDoc;
+}
+
+const { work } = Astro.props;
+const theta = Astro.url.searchParams.get("theta");
+const base = import.meta.env.BASE_URL;
+const createHref = withBase(`/create/${work.id}/`, base);
+---
+<ShellLayout title={`${work.title} — Liquid Mondrian`} current="gallery">
+  <article>
+    <header class="prose">
+      <h1>{work.title}</h1>
+      <p class="lede">
+        {work.year} · {work.source.collection} · study after Mondrian (not a photograph)
+      </p>
+    </header>
+    <Frame work={work} />
+    <Caption work={work} theta={theta} />
+    <p class="btn-row prose">
+      <a class="btn btn--primary" href={createHref}>Open in editor (M6 placeholder)</a>
+      <a class="btn btn--ghost" href={withBase("/gallery/", base)}>Back to gallery</a>
+    </p>
+  </article>
+  <script type="application/json" id="work-data" set:html={safeWorkJson(work)} />
+  <script>
+    import "../../scripts/source.js";
+  </script>
+</ShellLayout>

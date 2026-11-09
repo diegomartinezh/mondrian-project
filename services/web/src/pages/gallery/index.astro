@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import ShellLayout from "../../layouts/ShellLayout.astro";
+import Frame from "../../components/Frame.astro";
+import { withBase } from "../../lib/url";
+import type { WorkDoc } from "../../lib/work-plan";
+
+const base = import.meta.env.BASE_URL;
+const works = await getCollection("works");
+---
+<ShellLayout title="Gallery — Liquid Mondrian" current="gallery">
+  <article class="prose">
+    <h1>Gallery</h1>
+    <p class="lede">
+      Measured source compositions as live CSS Grid miniatures — the same plan
+      the editor will draw as SVG.
+    </p>
+  </article>
+  <div class="card-grid">
+    {
+      works.map((entry) => {
+        const work = entry.data as WorkDoc;
+        return (
+          <a class="work-card" href={withBase(`/gallery/${work.id}/`, base)}>
+            <Frame work={work} compact />
+            <h2>{work.title}</h2>
+            <p>
+              {work.year} · {work.source.collection}
+            </p>
+          </a>
+        );
+      })
+    }
+  </div>
+</ShellLayout>

@@ -8,20 +8,24 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/assert-favicon-base.mjs && node ../../scripts/assert-works-count.mjs",
+    "build": "astro build && node scripts/assert-favicon-base.mjs && node ../../scripts/assert-works-count.mjs && node scripts/assert-dist-links.mjs",
     "preview": "astro preview",
     "test": "vitest run",
+    "test:e2e": "pnpm exec playwright test",
     "lint": "node -e \"console.log('web: lint deferred')\""
   },
   "dependencies": {
     "@astrojs/svelte": "^9.1.1",
     "@mondrian/editor": "workspace:*",
+    "@mondrian/matrix": "workspace:*",
     "@mondrian/tokens": "workspace:*",
     "astro": "^7.4.2",
+    "gsap": "3.13.0",
     "svelte": "^5.57.3",
     "yaml": "^2.9.1"
   },
   "devDependencies": {
+    "@playwright/test": "1.56.1",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }
