@@ -17,11 +17,7 @@ def vary(work: dict[str, Any], variation_id: str) -> dict[str, Any]:
         return _mirror(_mirror(work, "x"), "y")
     if variation_id == "invert-contrast":
         return _invert_contrast(work)
-    if variation_id in {"invert-rank", "complement", "reciprocal", "equalize"}:
-        # Weight redistributions act on catalog artefacts, not work.yml geometry.
-        # For catalog we still emit geometry-identical work + note in meta.
-        return copy.deepcopy(work)
-    return copy.deepcopy(work)
+    raise ValueError(f"unknown or omitted MVP variation: {variation_id}")
 
 
 def _mirror(work: dict[str, Any], axis: str) -> dict[str, Any]:

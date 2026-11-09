@@ -30,7 +30,7 @@ __pycache__/
 !.vscode/extensions.json
 
 # Generated catalog (M2+)
-services/web/public/patterns/
+services/web/public/patterns/*
 !services/web/public/patterns/.gitkeep
 
 # Private / local

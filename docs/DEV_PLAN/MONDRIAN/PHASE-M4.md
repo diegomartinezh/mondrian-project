@@ -1,7 +1,7 @@
 # PHASE-M4: Analyzer — image to source primitives, with provenance and evaluation
 
 > **Track:** L4 (Python). Parallel lane with M3/M6 once M2 is DONE. Owned by the Analyzer & API lane.
-> **Status:** BLOCKED (M2 DONE)
+> **Status:** READY — M2 DONE (8 Nov 2026); parallel Python lane may open
 
 ## Goal
 

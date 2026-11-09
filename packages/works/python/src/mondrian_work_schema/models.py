@@ -176,21 +176,34 @@ class Work(BaseModel):
         xm = {p.id: p.position for p in self.geometry.points["x"]}
         ym = {p.id: p.position for p in self.geometry.points["y"]}
         chromatic = 0
-        for r in self.geometry.rectangles:
+        planes: list[tuple[float, float, float, float, int]] = []
+        for i, r in enumerate(self.geometry.rectangles):
             for pid in r.x:
                 if pid not in xm:
                     raise ValueError("geometry.rectangles")
             for pid in r.y:
                 if pid not in ym:
                     raise ValueError("geometry.rectangles")
-            if xm[r.x[0]] >= xm[r.x[1]] or ym[r.y[0]] >= ym[r.y[1]]:
+            x0, x1 = xm[r.x[0]], xm[r.x[1]]
+            y0, y1 = ym[r.y[0]], ym[r.y[1]]
+            if x0 >= x1 or y0 >= y1:
                 raise ValueError("geometry.rectangles")
             if r.role in ("red", "yellow", "blue"):
                 chromatic += 1
             if r.role != "white" and r.role not in self.swatches:
                 raise ValueError(f"swatches.{r.role}")
+            if r.role != "white":
+                planes.append((x0, x1, y0, y1, i))
         if chromatic < 1:
             raise ValueError("geometry.rectangles")
+        for a in range(len(planes)):
+            for b in range(a + 1, len(planes)):
+                ax0, ax1, ay0, ay1, _ = planes[a]
+                bx0, bx1, by0, by1, bi = planes[b]
+                ox = min(ax1, bx1) - max(ax0, bx0)
+                oy = min(ay1, by1) - max(ay0, by0)
+                if ox > 1e-12 and oy > 1e-12:
+                    raise ValueError(f"geometry.rectangles[{bi}]")
         if not self.geometry.lines:
             raise ValueError("geometry.lines")
         parallels: dict[str, list[tuple[float, float, float, float]]] = {

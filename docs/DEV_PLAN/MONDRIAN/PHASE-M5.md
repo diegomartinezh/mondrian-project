@@ -1,7 +1,7 @@
 # PHASE-M5: Analysis API — validated JSON and an HTML/CSS preview
 
 > **Track:** L5 (FastAPI on the studio LAN host). Owned by the Analyzer & API lane. Parallel with M3/M6.
-> **Status:** BLOCKED (M2 DONE; M4 for `/analyze`)
+> **Status:** BLOCKED (M4 for `/analyze`) — schema frozen at M2
 
 ## Goal
 

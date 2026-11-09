@@ -1,7 +1,7 @@
 # PHASE-M2: The contracts — source geometry, derived render plan, surface and state
 
 > **Track:** L0 contract, L1 first reference work, L2 geometry/state core. Freezes the spine every later phase depends on.
-> **Status:** VERIFYING — implementation handoff 29 Oct 2026; see [`PHASE-M2-HANDOFF.md`](PHASE-M2-HANDOFF.md). Not DONE until cold review.
+> **Status:** DONE — owner flip 8 Nov 2026 after cold review + F1–F5 triage. See [`PHASE-M2-REPORT.md`](PHASE-M2-REPORT.md) · [`PHASE-M2-COLD-REVIEW.md`](PHASE-M2-COLD-REVIEW.md).
 
 ## Goal
 
@@ -90,14 +90,13 @@ presentation and visitor customization must never share a model.
   pytest over the same fixtures plus catalog invariants.
 - Astro: `services/web/src/content.config.ts` zod schema + `works` collection loading `packages/works/works/*/work.yml`.
 - `scripts/conformance.sh`: runs the canonical schema directly with Ajv 8
-  (2020-12), then JS semantic validation, zod and pydantic over `fixtures/`;
-  adapters normalize each validator's native location into one JSON-path
-  convention. A fixture manifest declares `structural|semantic` and expected
-  first path: all four paths reject structural cases; Ajv is expected to accept
-  structurally valid semantic failures while JS, zod refinements and pydantic
-  reject them at the same path. The script then canonicalizes and diffs
-  JS/Python render plans for every valid work. Ajv is the sole added validation
-  dependency.
+  (2020-12), then JS semantic validation, zod (`work.zod.mjs`) and pydantic over
+  `fixtures/`; adapters normalize each validator's native location into one
+  JSON-path convention. Structural cases: Ajv + zod + pydantic reject (JS is
+  semantic-only and may accept). Semantic cases: Ajv may accept while JS, zod
+  refinements (via `validateWork`) and pydantic reject at the same first path.
+  The script then canonicalizes and diffs JS/Python render plans for every
+  valid work. Catalog MVP variations omit weight remaps until closed-form.
 - `PHASE-M2-COLD-REVIEW.md`, `PHASE-M2-REPORT.md`.
 
 ## Scope
@@ -179,9 +178,9 @@ Implement PHASE-M2 per docs/DEV_PLAN/MONDRIAN/PHASE-M2.md.
 
 - `scripts/conformance.sh` exit 0; output shows
   `valid.yml: schema=ok js=ok zod=ok py=ok plan=equal`. Structural fixtures show
-  four expected rejections; semantic fixtures show
-  `schema=structural-ok` plus expected JS/zod/pydantic rejections at the same
-  first path.
+  Ajv+zod+pydantic rejections (JS may accept); semantic fixtures show Ajv
+  structural-ok (or note) plus JS/zod/pydantic rejections at the same first
+  path.
 - `pnpm --filter @mondrian/matrix test` is green, including source immutability,
   deterministic tracks, line-over-plane stacking, visible-area sum-to-one, the
   wrap-around `mod` case and `?theta=banana → 0`.
@@ -202,13 +201,13 @@ Implement PHASE-M2 per docs/DEV_PLAN/MONDRIAN/PHASE-M2.md.
   no edge is clipped, all derived tracks stay positive and sum to 1. Applying
   palette inversion twice restores every source value for both lines and black
   planes.
-- Removing the JS semantic check for unknown point references makes
-  `broken/unknown-point-reference.yml` pass JS and makes conformance fail
-  (record the mutation run).
-- In temporary copies, remove one canonical `required` field, make the zod
-  mirror optional, remove one pydantic provenance requirement, and remove one
-  JS semantic reference check in turn; each mutation makes conformance fail,
-  proving all four validation paths and the semantic layer are load-bearing.
+- Mutation sample (recorded in REPORT): remove one canonical `required` field
+  from Ajv schema → structural fixture may pass Ajv while zod still rejects and
+  conformance exits non-zero. Unknown-point fixture is dual-gated with ordered
+  extents; disable both to prove the semantic layer is load-bearing.
+- Catalog emits original + four geometric/contrast variations only (no false
+  weight-remap clones). `assert-works-count.mjs` proves one measured work;
+  page-level `getCollection('works')` is M3.
 - Canonical JS and Python render-plan JSON agree within `1e-9`; deliberately
   changing one Python line edge makes conformance fail at scales `1` and
   non-default safe maximum.

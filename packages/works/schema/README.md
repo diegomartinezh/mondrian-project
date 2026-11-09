@@ -32,6 +32,13 @@ Roles: red / yellow / blue / black / white (+ optional gray extension).
 Non-chromatic roles never rotate with `--theta`. Lines are black overlays
 (`z=1`), not inferred from black planes.
 
+## Catalog variations (MVP)
+
+Shipped: `original`, `mirror-h`, `mirror-v`, `rotate-180`, `invert-contrast`.
+
+Omitted until a closed-form area rewrite is documented (no invented proportions):
+`invert-rank`, `complement`, `reciprocal`, `equalize`.
+
 ## Out of scope
 
 Material colour variation, brush texture, generation, authenticity scoring.
