@@ -1,7 +1,7 @@
 # PHASE-M3: Product shell — start, gallery, About story, About Us, method
 
 > **Track:** L3 site (public). Consumes L0–L2 unchanged.
-> **Status:** IN_PROGRESS — public shell implementation (9 Nov 2026); M2 DONE on main
+> **Status:** DONE (scaffold) — 9 Nov 2026; Wave A polish is student-owned. See [`PHASE-M3-REPORT.md`](PHASE-M3-REPORT.md).
 
 ## Goal
 

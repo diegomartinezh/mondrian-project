@@ -13,9 +13,10 @@ Distilled from TEAM-ASSIGNMENTS.md · 9 November 2026
 
 | Item | State |
 | --- | --- |
-| M2 closeout | [PR #3](https://github.com/ruvebal/mondrian-project/pull/3) — needs **1 human approval** then merge |
-| M3 shell implementation | Starts **after** #3 is on `main` (paste [`PHASE-M3.md`](PHASE-M3.md)) |
-| Plans / reading / issue drafting | **Allowed now** |
+| M2 / M3 scaffold | **On `main`** (#3, #5) — shell runnable |
+| Wave A polish | **Your seats** — see [`ISSUE-SEEDS.md`](ISSUE-SEEDS.md) |
+| M4 / M8 | **OPEN** for seats 1 + everyone — scaffold only |
+| Plans / PRs | Branch from current `main` |
 
 ---
 
