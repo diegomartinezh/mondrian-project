@@ -1,9 +1,12 @@
 # Contributing — Mondrian Project
 
+**Product marque:** Neoplastix · **Programme / repo:** Mondrian Project · D-33 (cascade `DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md`)
+
 ## Sync before you branch
 
-1. `git fetch origin && git checkout main && git pull`
-2. Branch from **current** `main` only.
+1. `git fetch origin && git checkout main && git pull --ff-only`
+2. Branch from **current** `main` only (never from a stale local topic branch).
+3. Prefer small PRs; rebase onto `main` before asking for review.
 
 ## Branch naming
 
@@ -12,6 +15,8 @@ lane/<handle>-issue-<n>-<slug>
 ```
 
 Example: `lane/atiaas-issue-12-catalog-cli`
+
+Instructor / agent scaffold branches use `cursor/<descriptive-slug>-29ae` (Cloud Agent convention).
 
 A branch created before current `main` fails the sync preflight — rebase or recreate.
 

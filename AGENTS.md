@@ -1,8 +1,8 @@
 # AGENTS.md — Mondrian Project
 
 **Format:** [AGENTS.md](https://github.com/agentsmd/agents.md) · tool-agnostic  
-**Product:** Liquid Mondrian (visitor marque) · repo `ruvebal/mondrian-project`  
-**Cascade:** `docs/DEV_PLAN/MONDRIAN/`
+**Product:** Neoplastix (visitor marque; `neoplastix.io` after cohort demo) · programme/repo `ruvebal/mondrian-project`  
+**Cascade:** `docs/DEV_PLAN/MONDRIAN/` · naming [D-33](docs/DEV_PLAN/MONDRIAN/DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)
 
 ## Dev environment
 

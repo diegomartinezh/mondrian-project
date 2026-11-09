@@ -15,6 +15,7 @@ Branch naming reminder: `lane/<handle>-issue-<n>-<slug>`
 | `[shell] Gallery CSS Grid pedagogy + method page depth` | 4 | S4-T1, S4-T2, S4-T3 |
 | `[shell] About-us credits + contribute sync` | 5 | S5-T1, S5-T4 |
 | `[design] Token barrel consumption + visual QA checklist` | 7 | U7-T1, U7-T6 |
+| `[brand] Neoplastix wordmark / --nx token QA` | 7 ∩ instructor | D-33 |
 | `[ci] Playwright fit + axe on gallery/about` | 4 ∩ 2 | M3 Acceptance |
 
 ## M4 — Analyzer (parallel)

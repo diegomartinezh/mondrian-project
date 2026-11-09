@@ -14,7 +14,7 @@ M4 open scaffold — not a DONE report. Seat 1 owns implementation.
 | Artefact | Notes |
 | --- | --- |
 | Package | `packages/analyzer` uv member |
-| CLI contract | `mondrian-analyzer analyze|evaluate|version` (stub exits 2 with JSON) |
+| CLI contract | `neoplastix-analyzer analyze|evaluate|version` (stub exits 2 with JSON; D-33) |
 | Schema / derive | Frozen at M2 — consume, do not fork |
 | Fixtures | `packages/works/fixtures/valid.yml` for synthetic round-trips |
 
