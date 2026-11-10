@@ -1,0 +1,86 @@
+---
+/**
+ * v4 Equivalence: the Mondrian Art Problem (OEIS A276523). An n×n square split into
+ * pairwise non-congruent rectangles; "defect" = largest area − smallest area, minimised.
+ * Data: exhaustive search frozen in @mondrian/neoplastic (n = 3..6 equal OEIS; 7, 8 computed).
+ * Geometry moves (WAAPI-free CSS transitions on HTML planes); colour never blends: it cuts.
+ */
+import NeoplasticLanding from "../../../components/neoplastic/NeoplasticLanding.astro";
+import art from "@mondrian/neoplastic/data/mondrian-art.json";
+
+const ROLES = ["red", "white", "blue", "white", "yellow", "white", "black", "white", "white", "white", "white", "white"];
+const steps = [3, 4, 5, 6, 7, 8].flatMap((n) => art.map[n].solutions.slice(0, n >= 6 ? 2 : 1).map((s) => {
+  const ranked = [...s].sort((a, b) => b.w * b.h - a.w * a.h);
+  return { n, defect: art.map[n].defect, rects: ranked.map((r, k) => ({ ...r, role: ROLES[k] || "white" })) };
+}));
+const pool = Math.max(...steps.map((s) => s.rects.length));
+const first = steps[0];
+---
+<NeoplasticLanding variant="v4">
+  <div slot="art" class="np-field np-eq" data-np-eq={JSON.stringify(steps)}>
+    {Array.from({ length: pool }, (_, k) => {
+      const r = first.rects[k];
+      const style = r
+        ? `left:${(r.x / first.n) * 100}%;top:${(r.y / first.n) * 100}%;width:${(r.w / first.n) * 100}%;height:${(r.h / first.n) * 100}%`
+        : "left:100%;top:100%;width:0;height:0";
+      return <div class={`np-eq__plane np-eq__plane--${r?.role ?? "white"}`} style={style} />;
+    })}
+  </div>
+  <div slot="math-note" class="np-eq__panel">
+    <p class="np-eq__caption" data-np-eq-caption>n = {first.n} · defect {first.defect} · {first.rects.length} rectangles, none congruent</p>
+    <p class="np-eq__controls">
+      <button type="button" data-np-eq-prev>Previous</button>
+      <button type="button" data-np-eq-toggle aria-pressed="false">Pause</button>
+      <button type="button" data-np-eq-next>Next</button>
+    </p>
+  </div>
+</NeoplasticLanding>
+
+<style is:global>
+  .np-eq { background: var(--nx-role-black); }
+  .np-eq__plane {
+    position: absolute; box-shadow: inset 0 0 0 calc(var(--np-arm) / 2) var(--nx-role-black);
+    transition: left 900ms var(--nx-ease-standard), top 900ms var(--nx-ease-standard), width 900ms var(--nx-ease-standard), height 900ms var(--nx-ease-standard);
+  }
+  .np-eq__plane--white { background: var(--nx-role-white); }
+  .np-eq__plane--red { background: var(--nx-role-red); }
+  .np-eq__plane--blue { background: var(--nx-role-blue); }
+  .np-eq__plane--yellow { background: var(--nx-role-yellow); }
+  .np-eq__plane--black { background: var(--nx-role-black); }
+  .np-eq__caption { font-family: var(--nx-font-caption); font-size: var(--nx-text-sm); margin: 0 0 0.5rem; }
+  .np-eq__controls { display: flex; gap: 0.5rem; margin: 0 0 1rem; flex-wrap: wrap; }
+  .np-eq__controls button { min-height: 44px; padding: 0 0.9rem; border: 2px solid currentColor; background: transparent; color: inherit; font: inherit; border-radius: 0; cursor: pointer; }
+  .np-eq__controls button:focus-visible { outline: 3px solid var(--nx-role-yellow); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .np-eq__plane { transition: none; } }
+</style>
+
+<script>
+  const host = document.querySelector<HTMLElement>("[data-np-eq]");
+  if (host) {
+    const steps = JSON.parse(host.dataset.npEq || "[]");
+    const planes = [...host.querySelectorAll<HTMLElement>(".np-eq__plane")];
+    const caption = document.querySelector("[data-np-eq-caption]");
+    const toggle = document.querySelector<HTMLButtonElement>("[data-np-eq-toggle]");
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let at = 0;
+    let timer = 0;
+    const show = (k: number) => {
+      at = (k + steps.length) % steps.length;
+      const s = steps[at];
+      planes.forEach((p, i) => {
+        const r = s.rects[i];
+        p.className = `np-eq__plane np-eq__plane--${r?.role ?? "white"}`;
+        Object.assign(p.style, r
+          ? { left: `${(r.x / s.n) * 100}%`, top: `${(r.y / s.n) * 100}%`, width: `${(r.w / s.n) * 100}%`, height: `${(r.h / s.n) * 100}%` }
+          : { left: "100%", top: "100%", width: "0", height: "0" });
+      });
+      if (caption) caption.textContent = `n = ${s.n} · defect ${s.defect} · ${s.rects.length} rectangles, none congruent`;
+    };
+    const play = () => { stop(); timer = window.setInterval(() => show(at + 1), 3200); toggle?.setAttribute("aria-pressed", "false"); if (toggle) toggle.textContent = "Pause"; };
+    const stop = () => { window.clearInterval(timer); timer = 0; toggle?.setAttribute("aria-pressed", "true"); if (toggle) toggle.textContent = "Play"; };
+    toggle?.addEventListener("click", () => (timer ? stop() : play()));
+    document.querySelector("[data-np-eq-prev]")?.addEventListener("click", () => { stop(); show(at - 1); });
+    document.querySelector("[data-np-eq-next]")?.addEventListener("click", () => { stop(); show(at + 1); });
+    if (reduced) stop(); else play();
+  }
+</script>

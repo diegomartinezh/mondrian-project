@@ -1,0 +1,174 @@
+/* Neoplastix landing (D-37). Tokens only; orthogonal only (D-34: radius 0, hairline → armature).
+ * The layout is a neoplastic grid: black gaps are the armature, cells are planes.
+ * Contrast (hex-color-tools): paper on red 4.83:1, paper on blue 5.86:1, ink on yellow 12.5:1.
+ * Never ink on red (3.47:1). */
+
+.np {
+  --np-arm: clamp(6px, 0.85vw, 14px);
+  --np-pad: clamp(1rem, 2.4vw, 2.25rem);
+  --np-ink: var(--nx-role-black);
+  --np-paper: var(--nx-role-white);
+  min-height: 100vh;
+  background: var(--np-ink);
+  color: var(--np-ink);
+  font-family: var(--nx-font-body);
+}
+
+.np a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+.np a:focus-visible { outline: 3px solid var(--nx-color-focus); outline-offset: 3px; }
+
+.np-skip { position: absolute; left: -999px; top: 0; z-index: 10; background: var(--np-paper); padding: 0.75rem 1rem; }
+.np-skip:focus { left: var(--np-arm); top: var(--np-arm); }
+
+/* Bar: a black band of the armature itself, with paper type. */
+.np-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.25rem 1.5rem;
+  padding: 0.75rem var(--np-pad);
+  color: var(--np-paper);
+  font-family: var(--nx-font-caption);
+  letter-spacing: 0.04em;
+}
+.np-bar__home { display: inline-flex; align-items: center; gap: 0.7rem; text-decoration: none; font-weight: 500; font-size: 1.05rem; min-height: 44px; }
+.np-bar__mark { width: 30px; height: 30px; display: block; outline: 2px solid var(--np-paper); }
+.np-bar__nav { display: flex; gap: clamp(0.75rem, 2vw, 2rem); flex-wrap: wrap; }
+.np-bar__nav a { text-decoration: none; padding: 0.6rem 0; min-height: 44px; display: inline-flex; align-items: center; border-bottom: 2px solid transparent; }
+.np-bar__nav a:hover { border-bottom-color: var(--nx-role-yellow); }
+
+.np-lab {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center;
+  margin: 0 var(--np-arm) var(--np-arm);
+  padding: 0.6rem var(--np-pad);
+  background: var(--nx-role-yellow);
+  font-family: var(--nx-font-caption); font-size: var(--nx-text-sm);
+}
+.np-lab [aria-current] { font-weight: 500; }
+.np-lab__pager { margin-left: auto; display: flex; gap: 1rem; }
+
+/* ---- The grid: 50fr 35fr 27fr = Duijvestijn's first row -------------------------------- */
+.np-grid {
+  display: grid;
+  gap: var(--np-arm);
+  padding: 0 var(--np-arm) var(--np-arm);
+  grid-template-columns: 1fr;
+  grid-template-areas: "art" "title" "flag" "act" "welcome" "math";
+}
+.np--bleed .np-grid { grid-template-areas: "title" "flag" "act" "welcome" "math"; position: relative; z-index: 1; }
+
+.np-cell { background: var(--np-paper); padding: var(--np-pad); min-width: 0; }
+.np-cell--art { grid-area: art; padding: 0; aspect-ratio: 1; position: relative; overflow: hidden; }
+.np-cell--title { grid-area: title; display: flex; flex-direction: column; justify-content: flex-end; }
+.np-cell--flag { grid-area: flag; }
+.np-cell--act { grid-area: act; background: var(--nx-role-yellow); }
+.np-cell--welcome { grid-area: welcome; }
+.np-cell--math { grid-area: math; background: var(--nx-role-blue); color: var(--np-paper); }
+
+@media (min-width: 40rem) {
+  .np-grid { grid-template-columns: 35fr 27fr; grid-template-areas: "art art" "title title" "flag act" "welcome math"; }
+  .np--bleed .np-grid { grid-template-areas: "title title" "flag act" "welcome math"; }
+}
+@media (min-width: 64rem) {
+  .np-grid {
+    grid-template-columns: 50fr 35fr 27fr;
+    grid-template-areas: "art title title" "art flag act" "welcome welcome math";
+  }
+  .np--bleed .np-grid {
+    grid-template-columns: 50fr 35fr 27fr;
+    grid-template-areas: ". title title" ". flag act" "welcome welcome math";
+    background: none;
+  }
+}
+
+/* Full-bleed art (Descent, Foveal): the field is the ground; text planes float on it. */
+.np-bleed { position: fixed; inset: 0; z-index: 0; }
+.np--bleed .np-bar, .np--bleed .np-lab { position: relative; z-index: 1; }
+.np--bleed .np-bar { background: var(--np-ink); }
+.np--bleed .np-cell { box-shadow: 0 0 0 var(--np-arm) var(--np-ink); }
+.np--bleed .np-band { position: relative; z-index: 1; }
+
+/* ---- Field plane -------------------------------------------------------------------------- */
+.np-field { position: absolute; inset: 0; background: var(--np-paper); }
+.np-field__twin, .np-field__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.np-field__canvas { opacity: 0; transition: opacity 600ms var(--nx-ease-standard); }
+.np-field.is-live .np-field__canvas { opacity: 1; }
+
+/* ---- Type --------------------------------------------------------------------------------- */
+.np-kicker, .np-welcome__kicker { font-family: var(--nx-font-caption); font-size: var(--nx-text-xs); letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 0.75rem; }
+.np-title {
+  font-family: var(--nx-font-headline);
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, 7.5rem);
+  overflow-wrap: anywhere;
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+.np-subtitle { font-family: var(--nx-font-subhead); font-size: clamp(1.1rem, 1.8vw, 1.5rem); line-height: 1.3; max-width: 30ch; margin: 1.25rem 0 0; }
+.np-flag { margin: 0; font-family: var(--nx-font-subhead); font-size: clamp(1.15rem, 1.7vw, 1.55rem); line-height: 1.32; }
+.np-flag p { margin: 0; }
+.np-flag p::before { content: ""; display: block; width: 3rem; height: var(--np-arm); background: var(--nx-role-red); margin-bottom: 1rem; }
+.np-flag__cite { font-family: var(--nx-font-caption); font-size: var(--nx-text-sm); margin: 1rem 0 0; color: var(--nx-color-muted); }
+
+.np-actions { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; background: var(--np-ink); border: 2px solid var(--np-ink); }
+.np-actions a {
+  display: flex; justify-content: space-between; align-items: center; min-height: 48px;
+  padding: 0.7rem 0.9rem; background: var(--nx-role-yellow); text-decoration: none; font-weight: 500;
+  transition: background var(--nx-duration-fast) var(--nx-ease-standard), color var(--nx-duration-fast) var(--nx-ease-standard);
+}
+.np-actions a::after { content: "→"; flex: none; margin-left: 0.75rem; }
+.np-actions a:hover, .np-actions a:focus-visible { background: var(--np-ink); color: var(--np-paper); }
+
+.np-math__figure { font-family: var(--nx-font-headline); font-size: clamp(1.5rem, 2.6vw, 2.4rem); line-height: 1.05; margin: 0 0 1rem; font-weight: 500; }
+.np-math__figure span { display: block; font-size: 2.6em; line-height: 0.9; letter-spacing: -0.04em; }
+.np-math__note { font-size: var(--nx-text-sm); line-height: 1.5; margin: 0 0 1rem; }
+.np-math__link { font-weight: 500; display: inline-flex; min-height: 44px; align-items: center; }
+
+/* ---- Welcome card ------------------------------------------------------------------------- */
+.np-welcome { display: grid; gap: 1.1rem; grid-template-areas: "kicker" "title" "lede" "caps" "sign"; }
+.np-welcome__kicker { grid-area: kicker; }
+.np-welcome__title { grid-area: title; }
+.np-welcome__lede { grid-area: lede; max-width: 62ch; }
+.np-welcome__capacities { grid-area: caps; }
+.np-welcome__signature { grid-area: sign; }
+@media (min-width: 64rem) {
+  .np-welcome {
+    grid-template-columns: 1.15fr 1fr; column-gap: clamp(1.5rem, 3vw, 3rem);
+    grid-template-areas: "kicker caps" "title caps" "lede sign";
+    align-items: start;
+  }
+  .np-welcome__signature { align-self: end; }
+}
+.np-welcome__title { font-family: var(--nx-font-headline); font-weight: 500; font-size: clamp(1.6rem, 2.8vw, 2.5rem); line-height: 1.02; margin: 0; letter-spacing: -0.015em; }
+.np-welcome__lede { margin: 0; line-height: 1.55; font-size: 1.04rem; }
+.np-welcome__capacities {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap;
+  gap: 2px; background: var(--np-ink); border: 2px solid var(--np-ink);
+}
+.np-welcome__capacities li { flex: 1 1 8.5rem; }
+.np-welcome__capacities li { background: var(--np-paper); padding: 0.6rem 0.75rem calc(0.6rem + var(--np-arm)); display: grid; gap: 0.15rem; }
+.np-welcome__capacities li:nth-child(1) { box-shadow: inset 0 calc(-1 * var(--np-arm)) 0 var(--nx-role-red); }
+.np-welcome__capacities li:nth-child(3) { box-shadow: inset 0 calc(-1 * var(--np-arm)) 0 var(--nx-role-yellow); }
+.np-welcome__capacities li:nth-child(4) { box-shadow: inset 0 calc(-1 * var(--np-arm)) 0 var(--nx-role-blue); }
+.np-welcome__capacities span:first-child { font-weight: 500; }
+.np-welcome__es { font-family: var(--nx-font-caption); font-size: var(--nx-text-xs); color: var(--nx-color-muted); }
+.np-welcome__signature { display: flex; gap: 1rem; align-items: center; padding-top: 1.1rem; border-top: 2px solid var(--np-ink); }
+.np-welcome__signature p { margin: 0; }
+.np-welcome__mark { width: 56px; height: 56px; flex: none; outline: 2px solid var(--np-ink); }
+.np-welcome__name { font-weight: 500; font-size: 1.1rem; }
+.np-welcome__role, .np-welcome__motto { font-family: var(--nx-font-caption); font-size: var(--nx-text-sm); }
+.np-welcome__motto { margin-top: 0.25rem !important; font-style: italic; }
+
+/* ---- Band ---------------------------------------------------------------------------------- */
+.np-band {
+  display: grid; gap: var(--np-arm); padding: 0 var(--np-arm) var(--np-arm);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+.np-band > div { background: var(--np-paper); padding: var(--np-pad); }
+.np-band h2 { font-family: var(--nx-font-caption); font-size: var(--nx-text-xs); letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 0.75rem; font-weight: 500; }
+.np-band p, .np-band ul { margin: 0; line-height: 1.55; font-size: var(--nx-text-sm); }
+.np-band ul { padding-left: 1.1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .np-field__canvas { display: none; }
+  .np-actions a { transition: none; }
+}

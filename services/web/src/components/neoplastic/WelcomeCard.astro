@@ -1,0 +1,57 @@
+---
+/**
+ * Studio-professor welcome card with signature. Facts only from ~/src/AGENTS.md
+ * ("Who Works Here") and the public course pages; the mark is the minimal Mondrian
+ * partition (D-37), drawn inline so it inherits nothing and costs no request.
+ */
+import { minimalPartitionSVG } from "@mondrian/neoplastic/svg";
+
+interface Props {
+  tone?: "paper" | "ink";
+}
+const { tone = "paper" } = Astro.props;
+const mark = minimalPartitionSVG({ unit: 16, line: 2.5 }).replace(
+  "<svg ",
+  '<svg class="np-welcome__mark" aria-hidden="true" focusable="false" ',
+);
+const capacities = [
+  { en: "Scholar", es: "Investigador" },
+  { en: "Novelist", es: "Novelista" },
+  { en: "Teacher", es: "Docente" },
+  { en: "Light designer", es: "Diseñador de luz" },
+  { en: "Developer", es: "Desarrollador" },
+];
+---
+<article class:list={["np-welcome", `np-welcome--${tone}`]} aria-labelledby="np-welcome-title" data-np-owner>
+  <p class="np-welcome__kicker"><span lang="es">Bienvenida</span> · Welcome</p>
+  <h2 id="np-welcome-title" class="np-welcome__title">A studio for web, word and light</h2>
+  <p class="np-welcome__lede">
+    Neoplastix is taught and built in the open: a front-end cohort measures compositions after
+    Mondrian, one rectangle at a time, and learns the web as a craft of ratios: structure, then
+    colour, then motion, and always the reader.
+  </p>
+  <ul class="np-welcome__capacities" aria-label="Capacities">
+    {capacities.map((c) => (
+      <li>
+        <span>{c.en}</span>
+        <span class="np-welcome__es" lang="es">{c.es}</span>
+      </li>
+    ))}
+  </ul>
+  <div class="np-welcome__signature">
+    <Fragment set:html={mark} />
+    <div>
+      <p class="np-welcome__name">
+        <a href="https://orcid.org/0000-0001-6862-9081" rel="noopener">Rubén Vega Balbás, PhD</a>
+      </p>
+      <p class="np-welcome__role">
+        Web professor ·
+        <a href="https://www.udit.es/docentes/ruben-vega-balbas/" rel="noopener">UDIT</a>
+        · performing arts &amp; digital humanities
+      </p>
+      <p class="np-welcome__motto">
+        <span lang="es">Rectángulos en equilibrio</span> · Rectangles in balance
+      </p>
+    </div>
+  </div>
+</article>

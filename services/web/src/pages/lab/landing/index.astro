@@ -1,0 +1,57 @@
+---
+/** Landing lab index (D-37). noindex: design research, not a visitor destination. */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { landingVariants } from "../../../data/landing-variants";
+import { withBase } from "../../../lib/url";
+import { squaredSquareSVG } from "@mondrian/neoplastic/svg";
+import "../../../styles/neoplastic-landing.css";
+
+const base = import.meta.env.BASE_URL;
+const thumbs = landingVariants.map((v, k) => squaredSquareSVG({ size: 560, depth: k % 3, splitAt: 150, seed: 7 + k, orientation: k % 8 }));
+---
+<BaseLayout title="Landing lab · Neoplastix" bare noindex>
+  <div class="np" data-np-hero>
+    <header class="np-bar">
+      <a class="np-bar__home" href={withBase("/", base)}><span>Neoplastix</span></a>
+      <nav class="np-bar__nav" aria-label="Primary"><a href={withBase("/", base)}>Landing</a></nav>
+    </header>
+    <section class="np-labgrid" aria-labelledby="lab-title">
+      <div class="np-cell np-labgrid__intro">
+        <p class="np-kicker">Design research · noindex</p>
+        <h1 id="lab-title" class="np-welcome__title">Landing lab</h1>
+        <p>
+          Six versions of one landing, each built from the same frozen mathematics (D-37) with a
+          different technique. The canonical landing is the one marked. Ids are permanent.
+        </p>
+      </div>
+      <ol class="np-labgrid__list">
+        {landingVariants.map((v, k) => (
+          <li class="np-cell np-labcard">
+            <a href={withBase(`/lab/landing/${v.id}/`, base)} class="np-labcard__link">
+              <span class="np-labcard__thumb" aria-hidden="true" set:html={thumbs[k]} />
+              <span class="np-labcard__id">{v.id}{v.canonical && " · canonical"}</span>
+              <span class="np-labcard__name">{v.name}</span>
+            </a>
+            <p class="np-labcard__idea">{v.idea}</p>
+            <p class="np-labcard__tech">{v.technique} · JS: {v.js}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .np-labgrid { display: grid; gap: var(--np-arm); padding: 0 var(--np-arm) var(--np-arm); }
+  .np-labgrid__intro p:last-child { max-width: 60ch; line-height: 1.55; margin: 1rem 0 0; }
+  .np-labgrid__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--np-arm); grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+  .np-labcard { display: grid; gap: 0.6rem; align-content: start; }
+  .np-labcard__link { display: grid; gap: 0.35rem; text-decoration: none; }
+  .np-labcard__thumb { display: block; aspect-ratio: 1; outline: 2px solid var(--np-ink); }
+  .np-labcard__thumb :global(svg) { display: block; width: 100%; height: 100%; }
+  .np-labcard__id { font-family: var(--nx-font-caption); font-size: var(--nx-text-xs); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.4rem; }
+  .np-labcard__name { font-family: var(--nx-font-headline); font-size: 1.6rem; font-weight: 500; }
+  .np-labcard__link:hover .np-labcard__name { text-decoration: underline; }
+  .np-labcard__idea { margin: 0; line-height: 1.5; }
+  .np-labcard__tech { margin: 0; font-family: var(--nx-font-caption); font-size: var(--nx-text-xs); color: var(--nx-color-muted); }
+</style>
