@@ -16,7 +16,7 @@ if (!seat) {
 
 const base = import.meta.env.BASE_URL;
 ---
-<ShellLayout title={`Seat ${seat.id} — ${seat.title}`} current="assignments">
+<ShellLayout title={`Seat ${seat.id} — ${seat.title}`} current="assignments" noindex>
   <ScaffoldBanner seat={seat.id} handle={seat.handle} title="Seat scaffold" />
   <article class="prose">
     <p class="seat-card__meta">Wave {seat.wave} · {seat.track}</p>
