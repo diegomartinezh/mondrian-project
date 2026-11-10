@@ -42,6 +42,7 @@ behaviour, verified 10 Nov 2026). It stays a courtesy, not a contract (D-36 H3).
 | `/assignments/` · `/assignments/seat-{n}/` | **no** until M9 pseudonymisation (D-36 H6) | shows student handles |
 | `/design/tokens/` | no | design seat preview |
 | `/probe/svelte/` | no (already) | M1 probe |
+| `/lab/landing/` · `/lab/landing/v1/` … `/v6/` | **no** (`noindex`) | D-37 landing lab; ids append-only (`src/data/landing-variants.ts`); canonical `/` = v3 |
 | `/robots.txt` · `/sitemap-index.xml` | — | to add (D-36 H6) |
 | any other path | — | real **404** (never a 200 "not found") |
 

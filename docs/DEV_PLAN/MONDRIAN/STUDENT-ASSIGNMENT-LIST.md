@@ -6,7 +6,7 @@ Distilled from TEAM-ASSIGNMENTS.md · 9 November 2026
 # Student assignment list — cohort of 7
 
 **Product marque:** Neoplastix · **Programme / repo:** Mondrian Project (`ruvebal/mondrian-project`)  
-**Live:** https://neoplastix.crea-comm.net/ · **Legacy (D6):** https://ruvebal.github.io/mondrian-project/  
+**Live:** https://neoplastix.crea-comm.net/  
 **Naming ADR:** [`DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md`](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)  
 **Source of truth for seat IDs:** [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md)  
 **Not this file:** EN/ES student brief → **M9** only.

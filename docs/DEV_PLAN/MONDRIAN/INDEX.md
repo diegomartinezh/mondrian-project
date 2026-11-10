@@ -30,7 +30,7 @@ Full anchor + expansion: [`grounding/FLAG-QUOTE-1920.md`](grounding/FLAG-QUOTE-1
 | **Programme step** | **M3 scaffold DONE** — Wave A seats polish shell; M4/M8 OPEN for cohort |
 | **Product marque** | **Neoplastix** ([D-33](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)) · programme remains Mondrian Project · live `https://neoplastix.crea-comm.net` |
 | **Do not start** | Instructor agent finishing seat-graded analyzer/measurements; do not invent `(Mondrian 1920)` author-date |
-| **Live demo** | https://neoplastix.crea-comm.net/ · legacy https://ruvebal.github.io/mondrian-project/ (D6) · seats on [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) |
+| **Live demo** | https://neoplastix.crea-comm.net/ · seats on [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) |
 | **If time left** | Seat 1–2 skim Andrzejewski grounding; Seat 3 hears flag → About scene spine |
 
 ## How to read this pack
@@ -50,7 +50,8 @@ Full anchor + expansion: [`grounding/FLAG-QUOTE-1920.md`](grounding/FLAG-QUOTE-1
 | Neoplastix marque | [`DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md`](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md) | Visitor product = Neoplastix; programme/repo stay Mondrian Project this AY; Athanor slug unchanged. |
 | Style tokens | [`DECISIONS/D34-2026-11-10-STYLE-TOKEN-TYPOGRAPHY.md`](DECISIONS/D34-2026-11-10-STYLE-TOKEN-TYPOGRAPHY.md) · [`../../style/TOKEN-SYSTEM.md`](../../style/TOKEN-SYSTEM.md) · [`../../style/De_Stijl_Typography_Report.md`](../../style/De_Stijl_Typography_Report.md) · [`../../style/OPEN-TYPE-ALTERNATIVES.md`](../../style/OPEN-TYPE-ALTERNATIVES.md) | Barrel `packages/tokens/`; Van Doesburg / Futura / Neue Haas / Univers; OFL classroom stacks; form radius 0; Seat 7 preview. |
 | Favicon + Canvas 2.5D | [`DECISIONS/D35-2026-11-10-FAVICON-CANVAS-25D.md`](DECISIONS/D35-2026-11-10-FAVICON-CANVAS-25D.md) | Canonical `brand/mark.svg`; favicon family; `@mondrian/mark-canvas`; landing hero field + foveal mark. |
-| Locators, origin, edge | [`DECISIONS/D36-2026-11-10-LOCATORS-ORIGIN-EDGE.md`](DECISIONS/D36-2026-11-10-LOCATORS-ORIGIN-EDGE.md) · [`LOCATORS.md`](LOCATORS.md) | **Accepted 10 Nov 2026.** Lessons from TTOD Phase AA, re-probed here: owned origin only on stickers/QR, append-only recipe, locale-neutral printed paths, edge honesty on Pages, registry walked by tests. **H1 P0:** live domain half cut over (CSS/nav 404). |
+| Locators, origin, edge | [`DECISIONS/D36-2026-11-10-LOCATORS-ORIGIN-EDGE.md`](DECISIONS/D36-2026-11-10-LOCATORS-ORIGIN-EDGE.md) · [`LOCATORS.md`](LOCATORS.md) | **Accepted 10 Nov 2026.** Lessons from TTOD Phase AA, re-probed here: owned origin only on stickers/QR, append-only recipe, locale-neutral printed paths, edge honesty on Pages, registry walked by tests. H1 closed by PR #8 (`BASE=/` live; re-probed 10 Nov 2026 afternoon). |
+| Neoplastic landing | [`DECISIONS/D37-2026-11-10-NEOPLASTIC-LANDING-SQUARED-SQUARE.md`](DECISIONS/D37-2026-11-10-NEOPLASTIC-LANDING-SQUARED-SQUARE.md) | **Proposed.** Duijvestijn squared-square fractal field; minimal Mondrian partition favicon (MAP n = 3); landing grid 50fr 35fr 27fr; six lab versions at `/lab/landing/`; studio skill `neoplasticizer`. |
 | Cohort seats | [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) · [`STUDENT-ASSIGNMENT-LIST.md`](STUDENT-ASSIGNMENT-LIST.md) · [`ISSUE-SEEDS.md`](ISSUE-SEEDS.md) | Seats 1–7; waves; paste-ready issue titles. |
 | Technical director | [`MONDRIAN-CASCADE.md`](MONDRIAN-CASCADE.md) | D-01…D-32, ordered programme with falsifiable gates, master paste, hard constraints, layer map, closing protocol, resume rule, amendments to the pitch, repository layout. |
 | Private correspondence | `_private/` (gitignored; forge only) | Student preflight and department/ECSIT emails. Only status/dates enter tracked reports; addresses, replies and signed material remain private. |
@@ -116,6 +117,7 @@ Closing: each phase → VERIFYING → `PHASE-Mn-COLD-REVIEW.md` → amend if nee
 | Product branch | `main` @ `620f00a` (PR #1 M1 close) | `git log -1`, 27 Oct 2026 |
 | Product remote | `git@github.com:ruvebal/mondrian-project.git` | `git remote -v` |
 | Pages home / contribute | **200** / **200** | `curl -sI` https://ruvebal.github.io/mondrian-project/{,/contribute/} |
+| **Re-probe 10 Nov 2026 (after PR #8)** | LOCATORS walk on `neoplastix.crea-comm.net`: `/ /gallery/ /about/ /about-us/ /method/ /contribute/` **200**; `/about` **301** → `/about/`; `/nope` **404**; `/probe/svelte/` noindex; github.io recipe URL **301** with query kept. Not yet on main: `/declaration/ /kiosk/ /assignments/ /design/tokens/ /site.webmanifest` (**404**, ship with D-34/D-35 PR); `/robots.txt`, sitemap, canonical: absent (D-36 H6); landing still links github.io (fixed by D-37 PR) | `curl` loop, LOCATORS §Routes |
 | **Re-probe 10 Nov 2026** | github.io **301 →** `neoplastix.crea-comm.net` (custom domain set, HTTPS enforced); domain serves HTML but `/mondrian-project/_astro/*.css`, brand, favicon, nav → **404** (`BASE` not flipped) | D-36 H1 · `gh api …/pages` |
 | Pages wrong path | **404** | `curl` `/this-path-does-not-exist` |
 | Favicon (D-base) | **200** at `/mondrian-project/favicon.svg` (glued path 404) | live curl after PR #1 deploy |

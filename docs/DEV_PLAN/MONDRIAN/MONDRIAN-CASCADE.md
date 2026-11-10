@@ -81,6 +81,7 @@ Each row is an ADR in one line. M0 recorded each as `ratified` or `rejected` wit
 | **D-34 Style tokens** | Barrel `packages/tokens/` (+ `form.css`); type roles Architype Van Doesburg / Futura / Neue Haas Grotesk / Univers; chrome `--nx-radius-chrome: 0`; painting fills stay D-07. Seat 7 owns preview. | Typography report + 1920 imprint grounding (FIRST-SOURCES §6.3–6.4). | Foundry license before claiming Architype webfont live. |
 | **D-35 Favicon + Canvas 2.5D** | Canonical `brand/mark.svg`; deterministic favicon family; `@mondrian/mark-canvas` (parse SVG rects); landing field + foveal mark; `setCameraPaused` coordination. | canvas-25d-content-hero skill · token palette. | Tune amplitudes only; do not redraw mark geometry. |
 | **D-36 Locators, origin, edge** | Owned origin only (`https://neoplastix.crea-comm.net`) in printed/copied/canonical URLs; path = work, query = Recipe, fragment = position; recipe keys/ids **append-only**, unknown ignored, invalid clamped + announced, absent `v` = 1; locale never in printed paths; always-slash; edge honesty on Pages; [`LOCATORS.md`](LOCATORS.md) registry walked by tests and live probes. | TTOD Phase AA lessons re-probed here 10 Nov 2026: **H1 P0 half cutover** (domain live, `BASE` not flipped → CSS/nav 404), H2–H11. | Owned shortener domain, or a Phase 2 breaking recipe → `v=2` with a v1 reader. |
+| **D-37 Neoplastic landing** | Hero = Duijvestijn order-21 squared square as a fractal (only white planes open; orthogonal wipes, no colour blending); mark/favicon = minimal Mondrian partition (MAP n = 3, defect 2); landing grid `50fr 35fr 27fr`; six noindex lab versions. Mathematics as homage, never as Mondrian's measured proportions. | `neoplasticizer` skill · `packages/neoplastic` tests · OEIS A276523 | D-35 mark preferred → revert favicon only |
 
 **Decision status (27 Oct 2026 — owner amend):** D-32 **`adopted`**. Evidence: [`DECISIONS/D32-2026-10-27-SVG-STUDY-NOT-PHOTO.md`](DECISIONS/D32-2026-10-27-SVG-STUDY-NOT-PHOTO.md). Product repo already exists (`ruvebal/mondrian-project`); keep cascade docs in sync there.
 
@@ -89,6 +90,8 @@ Each row is an ADR in one line. M0 recorded each as `ratified` or `rejected` wit
 **Decision status (10 Nov 2026 — owner):** D-34 **`adopted`**. Evidence: [`DECISIONS/D34-2026-11-10-STYLE-TOKEN-TYPOGRAPHY.md`](DECISIONS/D34-2026-11-10-STYLE-TOKEN-TYPOGRAPHY.md) · [`../../style/TOKEN-SYSTEM.md`](../../style/TOKEN-SYSTEM.md).
 
 **Decision status (10 Nov 2026 — owner):** D-36 **`accepted`**. Evidence: [`DECISIONS/D36-2026-11-10-LOCATORS-ORIGIN-EDGE.md`](DECISIONS/D36-2026-11-10-LOCATORS-ORIGIN-EDGE.md). H1 (deploy `SITE`/`BASE` flip) is an ops action independent of adopting the rest.
+
+**Decision status (10 Nov 2026 — agent proposal):** D-37 **`proposed`** — awaiting owner on the PR. Evidence: [`DECISIONS/D37-2026-11-10-NEOPLASTIC-LANDING-SQUARED-SQUARE.md`](DECISIONS/D37-2026-11-10-NEOPLASTIC-LANDING-SQUARED-SQUARE.md).
 
 **Decision status (10 Nov 2026 — owner):** D-35 **`adopted`**. Evidence: [`DECISIONS/D35-2026-11-10-FAVICON-CANVAS-25D.md`](DECISIONS/D35-2026-11-10-FAVICON-CANVAS-25D.md).
 
