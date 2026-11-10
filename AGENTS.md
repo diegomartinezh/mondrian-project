@@ -6,12 +6,12 @@
 
 ## Dev environment
 
-| Tool | Pin |
-| --- | --- |
-| Node | **≥24.22.1** (`.nvmrc`) — refuse ≤20 and unpatched 22.22.x / 24.22.0 |
-| pnpm | via `packageManager` field; `engine-strict=true` |
-| Python | **3.12** via `uv` (`.python-version`) |
-| Astro | 7.x in `services/web` |
+| Tool   | Pin                                                                  |
+| ------ | -------------------------------------------------------------------- |
+| Node   | **≥24.22.1** (`.nvmrc`) — refuse ≤20 and unpatched 22.22.x / 24.22.0 |
+| pnpm   | via `packageManager` field; `engine-strict=true`                     |
+| Python | **3.12** via `uv` (`.python-version`)                                |
+| Astro  | 7.x in `services/web`                                                |
 
 ```bash
 cd ~/projects/ruvebal/scholar/udit/courses-repos/mondrian-project
