@@ -2,8 +2,8 @@
 
 **Product:** [Neoplastix](docs/DEV_PLAN/MONDRIAN/DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md) — cohort-built touch web app: measure neoplastic compositions after Mondrian, liquid-fill a frame, apply mathematical variations, and take a personal version away as URL, print, or file. Front-End I integrator for UDIT 2026–27.
 
-**Live site (until cutover):** https://ruvebal.github.io/mondrian-project/  
-**Canonical domain (medium-term):** https://neoplastix.crea-comm.net/  
+**Live site:** https://neoplastix.crea-comm.net/  
+**Legacy (doc-only):** https://ruvebal.github.io/mondrian-project/  
 **Repository:** https://github.com/ruvebal/mondrian-project
 
 > La Plastique nouvelle met ses rapports en équilibre esthétique et exprime par là l'harmonie nouvelle.  
@@ -11,7 +11,7 @@
 
 ## How to contribute
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) and the in-app [/contribute/](https://ruvebal.github.io/mondrian-project/contribute/) page. Seats and path ownership are listed there.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and the in-app [/contribute/](https://neoplastix.crea-comm.net/contribute/) page. Seats and path ownership are listed there.
 
 | Lane | Owns |
 | --- | --- |
