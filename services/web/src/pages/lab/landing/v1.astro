@@ -1,0 +1,21 @@
+---
+/** v1 Armature: inline SVG + CSS stroke draw-on. Zero JavaScript (economy baseline). */
+import NeoplasticLanding from "../../../components/neoplastic/NeoplasticLanding.astro";
+import { squaredSquareSVG } from "@mondrian/neoplastic/svg";
+const art = squaredSquareSVG({ size: 1120, depth: 1, splitAt: 314, drawOn: "css" }).replace("<svg ", '<svg class="np-armature" preserveAspectRatio="xMidYMid slice" ');
+---
+<NeoplasticLanding variant="v1">
+  <div slot="art" class="np-field" set:html={art} />
+</NeoplasticLanding>
+
+<style is:global>
+  /* pathLength="100" on every rect: one dash rule fits all sizes. Fills arrive after lines. */
+  .np-armature .np-line { stroke-dasharray: 100; stroke-dashoffset: 100; animation: np-draw 900ms var(--nx-ease-standard) forwards; animation-delay: calc(var(--np-i) * 28ms); }
+  .np-armature > rect:not(:first-child) { opacity: 0; animation: np-fill 500ms ease-out 1.4s forwards; }
+  @keyframes np-draw { to { stroke-dashoffset: 0; } }
+  @keyframes np-fill { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .np-armature .np-line { animation: none; stroke-dashoffset: 0; }
+    .np-armature > rect { animation: none !important; opacity: 1 !important; }
+  }
+</style>

@@ -36,6 +36,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.7(jsdom@26.1.0)(lightningcss@1.33.0)(yaml@2.9.1)
 
+  packages/mark-canvas: {}
+
   packages/matrix:
     devDependencies:
       vitest:
@@ -44,6 +46,12 @@ importers:
       yaml:
         specifier: ^2.9.1
         version: 2.9.1
+
+  packages/neoplastic:
+    devDependencies:
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(jsdom@26.1.0)(lightningcss@1.33.0)(yaml@2.9.1)
 
   packages/tokens: {}
 
@@ -55,9 +63,15 @@ importers:
       '@mondrian/editor':
         specifier: workspace:*
         version: link:../../packages/editor
+      '@mondrian/mark-canvas':
+        specifier: workspace:*
+        version: link:../../packages/mark-canvas
       '@mondrian/matrix':
         specifier: workspace:*
         version: link:../../packages/matrix
+      '@mondrian/neoplastic':
+        specifier: workspace:*
+        version: link:../../packages/neoplastic
       '@mondrian/tokens':
         specifier: workspace:*
         version: link:../../packages/tokens

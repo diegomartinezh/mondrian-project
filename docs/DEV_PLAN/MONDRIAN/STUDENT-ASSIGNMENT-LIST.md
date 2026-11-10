@@ -6,7 +6,7 @@ Distilled from TEAM-ASSIGNMENTS.md · 9 November 2026
 # Student assignment list — cohort of 7
 
 **Product marque:** Neoplastix · **Programme / repo:** Mondrian Project (`ruvebal/mondrian-project`)  
-**Live:** https://neoplastix.crea-comm.net/ · **Legacy (D6):** https://ruvebal.github.io/mondrian-project/  
+**Live:** https://neoplastix.crea-comm.net/  
 **Naming ADR:** [`DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md`](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)  
 **Source of truth for seat IDs:** [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md)  
 **Not this file:** EN/ES student brief → **M9** only.
@@ -44,7 +44,7 @@ Instructor opens [`PHASE-M3.md`](PHASE-M3.md). **No Svelte island** on these rou
 | **3** About | `medinaxd29` | S3-T1, S3-T2, S3-T3, S3-T5 | Seven About scenes; GSAP parallax on `/about/` only; reduced-motion / no-JS complete; safe cites |
 | **4** Gallery / method | `Yassin-Skirej` | S4-T1, S4-T2, S4-T3 | Live CSS Grid gallery; `/method/` (no JS); container-query chrome |
 | **5** About-us / contribute | `itzy-4Qunn7` | S5-T1, S5-T4 | `/about-us/` credits + research/AI notice; `/contribute/` lanes |
-| **7** Tokens (slice) | `PauLAanDReEa-Ai` | U7-T1, U7-T6 | Token barrel for shell; visual QA on chrome PRs |
+| **7** Tokens (slice) | `PauLAanDReEa-Ai` | U7-T1, U7-T6 | Token barrel + type specimen preview ([`TOKEN-SYSTEM.md`](../../style/TOKEN-SYSTEM.md), D-34); visual QA on chrome PRs |
 
 Shared M3 gates: Playwright fit + θ fallbacks; axe clean; base-aware URLs; no painting photos.
 

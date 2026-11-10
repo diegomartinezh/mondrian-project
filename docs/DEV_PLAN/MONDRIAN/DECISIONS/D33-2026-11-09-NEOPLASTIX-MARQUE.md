@@ -60,6 +60,15 @@ Policy sentence:
 - Rewriting graded student seat prose
 - TTOD product identity (out of scope)
 
+## Live state (probed 10 Nov 2026 — see D-36 H1)
+
+The cutover is **half done**. The Pages custom domain is set (`cname: neoplastix.crea-comm.net`, cert approved,
+HTTPS enforced) and github.io 301s to it, but the deploy still builds `SITE=https://ruvebal.github.io`
+`BASE=/mondrian-project`. On the canonical domain the stylesheet, brand mark, favicon and every nav link 404.
+DNS is therefore live. Lock D5 (`BASE=/`) is now due: flip `SITE`/`BASE` in `deploy-pages.yml` and re-probe
+[`../LOCATORS.md`](../LOCATORS.md). With `build_type: workflow`, no `CNAME` file is needed (the domain lives in the
+Pages setting).
+
 ## Fallback
 
 If custom-domain deploy breaks: revert gated `SITE`/`BASE`/`CNAME` commit; site returns on github.io project URL. DNS CNAME may stay. See Project store DNS playbook §8.
