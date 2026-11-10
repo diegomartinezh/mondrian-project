@@ -1,0 +1,23 @@
+{
+  "name": "@mondrian/neoplastic",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Vendored neoplasticizer runtime: squared-square fractal field, SVG twins, minimal partition mark (D-37).",
+  "exports": {
+    ".": "./src/neoplastic-grid.js",
+    "./field": "./src/neoplastic-field.js",
+    "./svg": "./src/neoplastic-svg.js",
+    "./data/tilings.json": "./src/tilings.json",
+    "./data/mondrian-art.json": "./src/mondrian-art.json"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "sync": "bash ~/src/.cursor/skills/neoplasticizer/scripts/sync-to.sh src",
+    "build": "node -e \"console.log('neoplastic: no build step')\"",
+    "lint": "node -e \"console.log('neoplastic: lint deferred')\""
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}

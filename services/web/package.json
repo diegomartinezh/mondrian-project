@@ -19,8 +19,8 @@
     "@mondrian/editor": "workspace:*",
     "@mondrian/mark-canvas": "workspace:*",
     "@mondrian/matrix": "workspace:*",
+    "@mondrian/neoplastic": "workspace:*",
     "@mondrian/tokens": "workspace:*",
-
     "astro": "^7.4.2",
     "gsap": "3.13.0",
     "svelte": "^5.57.3",
