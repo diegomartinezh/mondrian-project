@@ -30,7 +30,7 @@ Policy sentence:
 | D1 | Keep programme name **Mondrian Project** |
 | D2 | Keep repo slug **now**; revisit post-term |
 | D3 | `@neoplastix` package scope **after Wave A** (P5) |
-| D4 | Canonical domain = **neoplastix.crea-comm.net** (medium-term). Vanity TLDs `neoplastix.io` / `.art` = deferred optional, not canonical. Live site remains github.io until DNS + host cutover. |
+| D4 | Canonical domain = **neoplastix.crea-comm.net** (medium-term). Vanity TLDs `neoplastix.io` / `.art` = deferred optional, not canonical. **Live** on custom domain after 10 Nov 2026 cutover (github.io = D6 legacy). |
 | D5 | `BASE=/` when neoplastix.crea-comm.net is live (apex path on subdomain) |
 | D6 | Legacy github.io = **doc-only** (no redirect stub required) |
 | D7 | **Hard-delete** user-visible “Liquid Mondrian” strings |
@@ -41,15 +41,14 @@ Policy sentence:
 | D12 | Cascade folder `docs/DEV_PLAN/MONDRIAN/` **not** renamed this term |
 | D13 | Announce via **class LMS** |
 
-## Deploy / DNS cutover (human; not this ADR)
+## Deploy / DNS cutover
 
 | Path | When | Notes |
 | --- | --- | --- |
-| **Live now** | Until cutover | `https://ruvebal.github.io/mondrian-project/` · `SITE=https://ruvebal.github.io` · `BASE=/mondrian-project` |
-| **GitHub Pages custom domain** | DNS ready, no own listener required | CNAME `neoplastix.crea-comm.net` → `ruvebal.github.io`; add repo `CNAME` / Pages setting; flip `SITE`/`BASE=/` |
-| **Studio host (Lilith / Traefik)** | A/AAAA only when a host listens | Point A/AAAA at Lilith once Traefik terminates TLS for `neoplastix.crea-comm.net` |
-
-Do **not** add a `CNAME` file or change deploy `SITE`/`BASE` until DNS is confirmed live.
+| **Live now** | After 10 Nov 2026 Path A cutover | `https://neoplastix.crea-comm.net/` · `SITE=https://neoplastix.crea-comm.net` · `BASE=/` · `services/web/public/CNAME` |
+| **Legacy (D6)** | Doc-only | `https://ruvebal.github.io/mondrian-project/` (GH redirects to custom domain when configured) |
+| **GitHub Pages custom domain** | Done (Path A) | CNAME `neoplastix.crea-comm.net` → `ruvebal.github.io`; Enforce HTTPS |
+| **Studio host (Lilith / Traefik)** | Only if studio later fronts the marque | Point A/AAAA at Lilith once Traefik terminates TLS for `neoplastix.crea-comm.net` |
 
 ## Out of this decision
 
@@ -63,4 +62,4 @@ Do **not** add a `CNAME` file or change deploy `SITE`/`BASE` until DNS is confir
 
 ## Fallback
 
-Until cutover, keep serving `https://ruvebal.github.io/mondrian-project/` with Neoplastix chrome and document `https://neoplastix.crea-comm.net` as the medium-term canonical name.
+If custom-domain deploy breaks: revert gated `SITE`/`BASE`/`CNAME` commit; site returns on github.io project URL. DNS CNAME may stay. See Project store DNS playbook §8.

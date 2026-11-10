@@ -34,8 +34,8 @@ jobs:
       - name: Build Astro site
         run: pnpm --filter @mondrian/web build
         env:
-          BASE: /mondrian-project
-          SITE: https://ruvebal.github.io
+          BASE: /
+          SITE: https://neoplastix.crea-comm.net
 
       - uses: actions/upload-pages-artifact@v3
         with:

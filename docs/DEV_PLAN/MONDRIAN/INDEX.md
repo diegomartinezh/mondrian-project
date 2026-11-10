@@ -28,9 +28,9 @@ Full anchor + expansion: [`grounding/FLAG-QUOTE-1920.md`](grounding/FLAG-QUOTE-1
 | --- | --- |
 | **Open with** | Flag quote on the board (French) + imprint · one sentence: *rapports* = the ratios the app liquid-fills |
 | **Programme step** | **M3 scaffold DONE** — Wave A seats polish shell; M4/M8 OPEN for cohort |
-| **Product marque** | **Neoplastix** ([D-33](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)) · programme remains Mondrian Project · canonical `https://neoplastix.crea-comm.net` (live = github.io until cutover) |
+| **Product marque** | **Neoplastix** ([D-33](DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)) · programme remains Mondrian Project · live `https://neoplastix.crea-comm.net` |
 | **Do not start** | Instructor agent finishing seat-graded analyzer/measurements; do not invent `(Mondrian 1920)` author-date |
-| **Live demo** | https://ruvebal.github.io/mondrian-project/ (legacy path; Neoplastix chrome) · seats on [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) |
+| **Live demo** | https://neoplastix.crea-comm.net/ · legacy https://ruvebal.github.io/mondrian-project/ (D6) · seats on [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) |
 | **If time left** | Seat 1–2 skim Andrzejewski grounding; Seat 3 hears flag → About scene spine |
 
 ## How to read this pack
@@ -101,7 +101,7 @@ Closing: each phase → VERIFYING → `PHASE-Mn-COLD-REVIEW.md` → amend if nee
 | First source imprint | *Le Néoplasticisme* Effort Moderne 1920 — [`FIRST-SOURCES-1920`](grounding/FIRST-SOURCES-1920-NEOPLASTICISM.md) |
 | Student seats + task specs | [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) — all 7 seats filled (5–7 random 29 Oct; reorder OK) |
 | Product repo | **Exists** — `ruvebal/mondrian-project`; cascade lives here |
-| Live Pages | https://ruvebal.github.io/mondrian-project/ → **200** |
+| Live Pages | https://neoplastix.crea-comm.net/ → **200** (legacy github.io redirects) |
 | M0 | **DONE** |
 | M1 | **DONE** — `main` protected; F1–F3 closed; letters remain ops (non-blocking) |
 | M2 | **DONE** — cold FAIL F1–F5 triage closed; M3 READY |

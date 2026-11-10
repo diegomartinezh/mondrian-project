@@ -1,7 +1,7 @@
 # AGENTS.md — Mondrian Project
 
 **Format:** [AGENTS.md](https://github.com/agentsmd/agents.md) · tool-agnostic  
-**Product:** Neoplastix (visitor marque; canonical `https://neoplastix.crea-comm.net` — live remains github.io until cutover) · programme/repo `ruvebal/mondrian-project`  
+**Product:** Neoplastix (visitor marque; live `https://neoplastix.crea-comm.net`) · programme/repo `ruvebal/mondrian-project`  
 **Cascade:** `docs/DEV_PLAN/MONDRIAN/` · naming [D-33](docs/DEV_PLAN/MONDRIAN/DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md)
 
 ## Dev environment
@@ -19,7 +19,7 @@ nvm use   # or fnm use
 pnpm install
 pnpm check
 uv sync && uv run pytest
-BASE=/mondrian-project pnpm --filter @mondrian/web build
+BASE=/ SITE=https://neoplastix.crea-comm.net pnpm --filter @mondrian/web build
 ```
 
 ## Verification before claiming done
