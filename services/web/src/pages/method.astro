@@ -21,9 +21,11 @@ import ScaffoldBanner from "../components/ScaffoldBanner.astro";
 
     <h2>2. Schema</h2>
     <p>
-      <code>work.schema.json</code> is the contract. Ajv, zod, JS semantic checks
-      and pydantic must agree on fixtures. Derived tracks are never written back
-      into <code>work.yml</code>.
+      <code>work.schema.json</code> is the single source contract. Zod and
+      pydantic are hand-written mirrors of that file — Python does not generate
+      TypeScript interfaces. Ajv, zod, JS semantic checks and pydantic must agree
+      on fixtures; JS and Python must emit the same render-plan JSON.
+      Derived tracks are never written back into <code>work.yml</code>.
     </p>
 
     <h2>3. Classical geometry (prior art)</h2>
