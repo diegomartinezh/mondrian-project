@@ -37,7 +37,7 @@ Not a cascade phase. Open when ready; do not block class demos on these.
 
 | Suggested title | When / owner | Spec |
 | --- | --- | --- |
-| `[ops] Pin Astro compressHTML + visible-text diff /, /gallery/, /method/` | Soon · instructor | TTOD-AA **P1** (Astro 7 default `'jsx'` can glue words) |
+| ~~`[ops] Pin Astro compressHTML + visible-text diff /, /gallery/, /method/`~~ | **Done** 11 Nov 2026 · instructor | TTOD-AA **P1** — `compressHTML: true` (default `'jsx'` glued nav / bilingual labels) |
 | `[ci] LOCATORS walk: //evil.example/x and /\\evil.example/x → 404` | LOCATORS / D-36 H11 · seat 2 ∩ instructor | TTOD-AA **P2** (edge honesty; probed live 11 Nov) |
 | `[pwa] Offline pages anonymous + network-first (before any SW)` | **M7** · seat 7 | TTOD-AA **P3** (shared-lab cookie leak) |
 | `[ci] Playwright browser install: timeout, apt retry, cache by version` | CI · instructor | TTOD-AA **P4** |

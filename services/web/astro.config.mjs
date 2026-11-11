@@ -11,4 +11,9 @@ export default defineConfig({
   base,
   integrations: [svelte()],
   outDir: "dist",
+  // TTOD-AA P1: Astro 7 default is 'jsx' (strips whitespace between inline
+  // elements). Visible-text diff on /, /gallery/, /method/ (11 Nov 2026):
+  // 'jsx' glued NeoplastixGallery…, ScholarInvestigador, ·UDIT·;
+  // true inserts the spaces; false also safe but noisier HTML. Pin true.
+  compressHTML: true,
 });

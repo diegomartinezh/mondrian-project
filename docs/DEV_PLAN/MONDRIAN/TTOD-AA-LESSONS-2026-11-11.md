@@ -18,7 +18,7 @@ carry the locator lessons of 10 Nov.
 
 | # | Lesson (TTOD evidence) | Mondrian today | Suggested check or action |
 | - | ---------------------- | -------------- | ------------------------- |
-| 1 | **Astro 7's `compressHTML` default is `'jsx'`:** whitespace between inline elements is stripped, so `<a>Library</a> <a>Ada</a>` renders "LibraryAda" (TTOD AA7 pinned `compressHTML: true` and diffed the visible text) | 7.4.2, no `compressHTML` in `astro.config.mjs`, so `'jsx'` is live | Build once with `compressHTML: true` and once without; diff the visible text of `/`, `/gallery/` and `/method/`. Keep whichever matches the designs, and write the choice down |
+| 1 | **Astro 7's `compressHTML` default is `'jsx'`:** whitespace between inline elements is stripped, so `<a>Library</a> <a>Ada</a>` renders "LibraryAda" (TTOD AA7 pinned `compressHTML: true` and diffed the visible text) | **Done 11 Nov 2026:** `compressHTML: true` in `services/web/astro.config.mjs`. Diff `/`, `/gallery/`, `/method/` visible text: default `'jsx'` glued `NeoplastixGalleryAboutMethodCreate`, `ScholarInvestigador` (+ Novelist/Teacher/Developer pairs), `Skip to contentNeoplastixHome`, `·UDIT·`; `true` restores spaces; `false` also safe (larger HTML). Kept `true`. | Re-diff those three routes after any Astro minor that touches HTML compression |
 | 2 | **`import.meta.env.X` is inlined at build time** (Astro 6+). TTOD had a server-only `BACKEND_URL` that would have frozen silently, so it reads `process.env` at request time now | Static output: build-time is the intended behaviour (`SITE`/`BASE`, D-36) | Nothing today. If an adapter is ever added, read runtime settings from `process.env` and never from `import.meta.env` |
 | 3 | **Behind a proxy, Astro 7's Node adapter normalizes the path** (`//host/x` → `/host/x`) before middleware sees it, so an app-level open-redirect guard goes blind. TTOD moved the guard to the edge (Caddy answers 404 on the raw request line) | Pages already answers 404 to `//host` and `/\host` (probed above) | Keep that probe in the LOCATORS walk; it is the edge's behaviour, not the app's |
 | 4 | **Markdown heading ids** (v6 keeps trailing hyphens; v7 renders through Sätteri). TTOD's ids, accented ones included, came out unchanged | Not probed | Before anyone cites a heading anchor, snapshot the ids once and diff after every Astro minor |
@@ -69,7 +69,7 @@ carry the locator lessons of 10 Nov.
 
 ## 4. Proposals for the owners (optional, not filed)
 
-- **P1:** decide `compressHTML` explicitly in `services/web/astro.config.mjs` (item 1), with the text diff as evidence.
+- **P1 (done 11 Nov 2026):** `compressHTML: true` in `services/web/astro.config.mjs` (item 1); evidence in the table row.
 - **P2:** add the `//host` and `/\host` probes to the LOCATORS walk (item 3; they pass today).
 - **P3:** a short "offline pages are anonymous and network-first" rule in the PWA phase, before any service worker
   ships (item 6).
