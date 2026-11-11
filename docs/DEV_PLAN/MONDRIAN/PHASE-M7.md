@@ -23,6 +23,10 @@ Device lockdown is a runbook. FastAPI is never contacted.
   `scope`, icons generated from the reference matrix—not a photograph),
   `<link rel=manifest>` through the same URL helper.
 - `src/sw.js` hand-written (precache the build manifest **and** `public/patterns/**`; stale-while-revalidate for pages; no runtime caching of the LAN API; never fetch FastAPI).
+  **TTOD-AA P3 (before any SW ships):** offline / precache fetches use
+  `credentials: 'omit'`; HTML navigations are **network-first**; never store a
+  credentialed response; bump the cache version on every SW change. Shared lab
+  browsers must not replay another user's personalized shell.
 - `src/scripts/kiosk.js`: wake lock with re-request on `visibilitychange`; idle
   timer (any pointer event resets; 60 s → the base-aware kiosk URL); attract
   loop driven by `@keyframes` on `--theta` (CSS); under
@@ -54,7 +58,8 @@ Implement PHASE-M7 per docs/DEV_PLAN/MONDRIAN/PHASE-M7.md.
    assert `start_url=/kiosk/` and `"id": "/kiosk/"` under production `BASE=/` (D-33 D5, D-36 H9; the old
    `/mondrian-project/kiosk/` assertion is superseded). The manifest `id` never changes after the first device install.
 3. Service worker: precache list generated post-build; versioned cache name from the build hash; cleanup on
-   activate; never cache cross-origin.
+   activate; never cache cross-origin. Precache with `credentials: 'omit'`; HTML = network-first;
+   never put a credentialed response in the cache (TTOD-AA P3).
 4. kiosk.js: wake lock (try/catch, re-request on visibilitychange), idle reset
    using a server-rendered base-aware URL, attract via toggling a class that
    starts the @keyframes on --theta; counters in sessionStorage.
@@ -74,6 +79,7 @@ Implement PHASE-M7 per docs/DEV_PLAN/MONDRIAN/PHASE-M7.md.
   `/create/<slug>/?profile=kiosk` navigates to `/kiosk/`; a pointer event at
   59 s prevents it.
 - Playwright `context.setOffline(true)` after first load: `page.reload()` on `/kiosk/` succeeds and renders the attract loop.
+- SW tests (or review checklist): precache requests omit credentials; a simulated credentialed HTML response is not written to cache; cache name changes when SW source changes.
 - Network log over a full kiosk session shows only same-origin requests.
 - Lighthouse: installable PWA (manifest valid, SW registered, HTTPS); a11y 100 on `/kiosk/`.
 - Real-device run recorded: wake lock held ≥ 10 min, a drag round completed by someone who had not read the brief, QR opened on a phone, idle reset observed.

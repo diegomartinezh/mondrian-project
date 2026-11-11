@@ -84,3 +84,9 @@ New fragment ids are added here first, then in code.
 1. **Unit (M6):** every recipe key's missing/invalid row above has a test. A fixture of URLs "printed" today must keep parsing to the same state (golden file under `packages/editor/test/recipes/`).
 2. **Build (CI):** build with production `BASE=/` **and** with a dummy non-root base. Both pass the dist grep for unprefixed hrefs.
 3. **Live (each phase report + scheduled smoke):** `curl` each route row against the canonical origin (status + `noindex` + `canonical`), and the legacy github.io redirect for one recipe URL.
+4. **Edge open-redirect / host-escape (TTOD-AA P2):** against the canonical origin,
+   `https://neoplastix.crea-comm.net//evil.example/x` and
+   `https://neoplastix.crea-comm.net/\evil.example/x` must answer **404**
+   (Pages edge behaviour; probed 11 Nov 2026). Record status codes in the phase report.
+   Soft-404 empty 200 lists for unknown gallery filters (when any exist) are also forbidden
+   — prefer a real `notFound` (TTOD-AA item 9).

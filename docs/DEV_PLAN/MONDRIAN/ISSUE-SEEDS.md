@@ -31,6 +31,22 @@ Branch naming reminder: `lane/<handle>-issue-<n>-<slug>`
 | `[design] Manifest id/scope + maskable icons` | 7 | D-36 H9 · PHASE-M7 |
 | `[shell] Visitor nav ≤ 5; cohort pages to footer "Project"` | 3 ∩ 7 | D-36 H8 (scaffold close) |
 
+## TTOD-AA — avoid repeats ([`TTOD-AA-LESSONS-2026-11-11.md`](TTOD-AA-LESSONS-2026-11-11.md))
+
+Not a cascade phase. Open when ready; do not block class demos on these.
+
+| Suggested title | When / owner | Spec |
+| --- | --- | --- |
+| `[ops] Pin Astro compressHTML + visible-text diff /, /gallery/, /method/` | Soon · instructor | TTOD-AA **P1** (Astro 7 default `'jsx'` can glue words) |
+| `[ci] LOCATORS walk: //evil.example/x and /\\evil.example/x → 404` | LOCATORS / D-36 H11 · seat 2 ∩ instructor | TTOD-AA **P2** (edge honesty; probed live 11 Nov) |
+| `[pwa] Offline pages anonymous + network-first (before any SW)` | **M7** · seat 7 | TTOD-AA **P3** (shared-lab cookie leak) |
+| `[ci] Playwright browser install: timeout, apt retry, cache by version` | CI · instructor | TTOD-AA **P4** |
+| `[shell] Disclosure nav (aria-expanded), not modal focus-trap` | Wave A / M6 a11y · seat 3 ∩ 5 | TTOD-AA §2 |
+| `[shell] prefers-reduced-motion: put motion rules inside no-preference` | Wave A / M6 · seat 3 ∩ 7 | TTOD-AA §2 |
+| `[shell] One html scroll-padding-top from header token` | Wave A / M6 · seat 4 ∩ 7 | TTOD-AA §2 · D-36 H10 |
+
+Every Mn close also reuses TTOD-AA §3 method (exit gate first, falsify checks, look at screenshots, re-run prior gates unchanged) — see cascade §5.
+
 ## Wave C — Editor (after M3 DONE)
 
 | Suggested title | Seat | Spec IDs |

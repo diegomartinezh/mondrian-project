@@ -215,7 +215,8 @@ A phase that writes to a layer it is not listed for is out of order. L0 changes 
 
 `BLOCKED → READY → IN_PROGRESS → VERIFYING → COLD_REVIEW → DONE` (with `PARTIAL` allowed in reports for long lanes M4 and M8).
 
-- **VERIFYING** means: the phase's own tests *and* `pnpm -r test`, `pnpm -r build`, `uv run pytest` across the repo are green; every touched module imports; Astro builds with zero warnings.
+- **VERIFYING** means: the phase's own tests *and* `pnpm -r test`, `pnpm -r build`, `uv run pytest` across the repo are green; every touched module imports; Astro builds with zero warnings. Re-probe [`LOCATORS.md`](LOCATORS.md) § How it is proven (including TTOD-AA P2 host-escape curls) and record the table in the report.
+- **TTOD-AA method (every Mn close)** — from [`TTOD-AA-LESSONS-2026-11-11.md`](TTOD-AA-LESSONS-2026-11-11.md) §3: write the exit gate before the code and commit it alone; falsify every new check (swap old code back, confirm fail, restore); look at your own screenshots; on a platform upgrade re-run earlier gates **unchanged** and refuse if a gate was edited to pass. Not a new phase — checklist only.
 - **Cold review**: a fresh session (Cursor Task `generalPurpose`, or the studio `cascade-cold-reviewer` subagent) that did not implement the phase, receiving only the runbook Acceptance, the diff, the suite transcript and §3's hard constraints. Output `PHASE-Mn-COLD-REVIEW.md` with `Fn` findings (severity, blocks DONE?, evidence, fix). Zero findings is still a filed document.
 - **Amend on surprise**: if a finding invalidates a downstream assumption (e.g. relative colour syntax missing on the kiosk device, Astro base-path behaviour, TensorFlow wheel availability), amend this orchestrator and every downstream `PHASE-M*.md` in the **same commit** as the report, and write "cascade amended: <paths>" in the report.
 - **Report**: `PHASE-Mn-REPORT.md`, status first, commands with exit codes, no hedge words.

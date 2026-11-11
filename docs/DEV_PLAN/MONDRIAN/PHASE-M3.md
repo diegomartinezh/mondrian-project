@@ -81,6 +81,11 @@ Implement PHASE-M3 per docs/DEV_PLAN/MONDRIAN/PHASE-M3.md.
 - `package.json` includes `gsap`; contains neither `framer-motion` nor `motion`.
 - GSAP is not requested from gallery/home/editor routes (Playwright network).
 - axe: 0 critical, 0 serious on `/`, `/gallery/`, one source and `/about/`.
+- TTOD-AA §2 (Wave A polish): mobile/disclosure nav uses `aria-expanded` /
+  `aria-controls` (not a focus-trapped modal); motion rules live under
+  `@media (prefers-reduced-motion: no-preference)` so reduce wins on specificity;
+  one site-wide `html { scroll-padding-top: … }` from the header token (no
+  stacked per-view `scroll-margin` patches). Seeds in [`ISSUE-SEEDS`](ISSUE-SEEDS.md) § TTOD-AA.
 - Lighthouse a11y = 100 on a gallery source; scores recorded.
 - `grep -rhoE '(href|src)="[^"]+"' services/web/dist | grep -vE '^(href|src)="(/mondrian-project/|https?://|#|mailto:)'` returns nothing.
 - A crawl of every internal `href` in `dist/` returns no 404, including each

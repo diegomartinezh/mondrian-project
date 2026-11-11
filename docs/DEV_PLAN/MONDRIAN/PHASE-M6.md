@@ -22,7 +22,8 @@ Steal the **master idea**, not the showreel stack
 | --- | --- |
 | Who owns time / space / pixels | Svelte owns chrome state; SVG owns pixels; CSS owns `--theta` / fills |
 | Native first (CSS / WAAPI) | Handle hover/focus, chip press, theta scrub — no GSAP in editor (D-29 = About only) |
-| Reduced-motion + no-JS | Attract (M7) and chrome motion kill under `prefers-reduced-motion` |
+| Reduced-motion + no-JS | Attract (M7) and chrome motion under `prefers-reduced-motion: no-preference` only (TTOD-AA §2 — reduce must win specificity) |
+| Scroll / deep link | One `html { scroll-padding-top }` from header token (TTOD-AA §2 · D-36 H10) |
 | Facet / path click games | **Forbidden** on measured planes/lines (Addendum B). Gamify frame, format chips, variation, theta, compare, **clip chips** |
 | Rive / Lottie / Three / Canvas 2.5D | Landing mark only — never inside the painting |
 
