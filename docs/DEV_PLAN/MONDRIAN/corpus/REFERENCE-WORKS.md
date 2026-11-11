@@ -23,6 +23,26 @@ multi-grey, and pre–neo-plastic / Cubist-transition works (e.g. 1914
 
 **Not selected (documented reject):** MoMA *Tableau no. 2 / Composition no. V* (1914, 54.8 × 85.3 cm) — horizontal but Cubist-transition, outside D-12 orthogonal black-armature neo-plastic scope.
 
+## Limit cases for digitalization (M8 / analyzer triage)
+
+Named specimens the measurement lane must **refuse to encode** as
+`work.yml` — even when the painting is abstract, geometric, famous, or
+recently in the news. Use these at issue triage and in M9 defence when a
+student (or an assistant) proposes “it looks measurable.”
+
+| Kind | Slug (provisional) | Work | Why the partition fails | Product fate |
+| --- | --- | --- | --- | --- |
+| Cubist-transition Mondrian | *(none)* | MoMA *Tableau no. 2 / Composition no. V* (1914) | Outside D-12 neo-plastic orthogonal black-armature scope | Documented reject only |
+| Spiritual geometry (wrong armature) | `hak-1920-ser-iii-5` | Hilma af Klint, *Ser III No. 5* (dated **18 Jan 1920**). Oil + graphite on canvas **38.5 × 29 cm**. Hilma af Klint Foundation archive **HaK480**. Cat. raisonné: Almqvist (ed.), *Hilma af Klint – Catalogue raisonné* vol. 5 *Geometric Series and Other Works 1917–1920* (2021), p. 115. Auction record (classroom identity gate, not a photo to commit): [Bukowskis lot](https://www.bukowskis.com/en/auctions/676/827-hilma-af-klint-ser-iii-no-5) | Circles, triangles, theosophical seal / cross symbols, and graphite notations — **not** an H/V black-line + rectangular-plane partition. Light/dark polarity and yellow/blue squares are spiritual diagram language, not neoplastic liquid-fill armature. Tempting edge case because it is small, geometric, and abstract. AABB colour patches alone are a Mondrian-ish lie about this silhouette. | **Limit case** — never catalog, never analyzer golden, never student M8 slug. **D-38 plane `clip`** (circle/triangle on AABB) is the editor **silhouette lab** so the class can see the lie without promoting HaK480 into the corpus. |
+
+**Teaching sentence (Seat 1 / every M8 issue):** abstract + geometric ≠ schema-valid.
+*Ser III No. 5* is the named specimen for that sentence (same artist as C1 in
+[`../grounding/WOMEN-IN-ABSTRACTION-VERIFIED-CLAIMS.md`](../grounding/WOMEN-IN-ABSTRACTION-VERIFIED-CLAIMS.md);
+priority of abstraction still ≠ D-12 contact).
+
+Do **not** invent a `work.yml` for `hak-1920-ser-iii-5`. Do **not** commit a
+reproduction. Recording the refuse is the assignment artefact.
+
 ## Reproduction for measuring (pixel size + crop)
 
 No photograph or scan is stored in this forge folder (M0 constraint). Files were
@@ -91,6 +111,11 @@ Who recorded rights rows: instructor (M0, 26 Oct 2026); growth candidates 27 Oct
 
 ## Historiography notes (teaching stack — 27 Oct 2026)
 
+**Verified claim table (DH result report):**
+[`../grounding/WOMEN-IN-ABSTRACTION-VERIFIED-CLAIMS.md`](../grounding/WOMEN-IN-ABSTRACTION-VERIFIED-CLAIMS.md)
+(11 Nov 2026 — per-claim validation + **References missing to ingest** with
+DOI / ISBN / LCCN / thesis deposits; no Ahmes coats yet).
+
 Prompted by public discussion of women artists sidelined in abstraction
 narratives (af Klint / Moss / Sobel). Use on `/about/` or seminar — **not**
 as a claim that every named artist is an MVP catalog texture.
@@ -139,8 +164,9 @@ these as **measured SVG studies** (same D-32 model), not drip/all-over.
 | **Anni Albers** | Grid as weave — module grid story | check term | About / method; optional textile-module measure |
 
 **Narrative / About only (wrong partition for liquid-fill MVP):** Hilma af
-Klint (spiritual diagrams); **Janet Sobel** (all-over drip); later Op /
-hard-edge (Riley, Herrera) until a separate schema lane exists.
+Klint (spiritual diagrams — named digitalization limit case: *Ser III No. 5*,
+above); **Janet Sobel** (all-over drip); later Op / hard-edge (Riley, Herrera)
+until a separate schema lane exists.
 
 **Product implication:** Mondrian remains the M0 measured set; promoting
 **one Moss (when lawful) + one Taeuber-Arp** as sibling textures is how the

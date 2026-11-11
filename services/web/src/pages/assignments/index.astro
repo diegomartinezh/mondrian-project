@@ -1,7 +1,7 @@
 ---
 import ShellLayout from "../../layouts/ShellLayout.astro";
 import ScaffoldBanner from "../../components/ScaffoldBanner.astro";
-import { neverRules, seats, sharedRules } from "../../data/seats";
+import { neverRules, seats, sharedRules, theoryHub } from "../../data/seats";
 import { withBase } from "../../lib/url";
 
 const base = import.meta.env.BASE_URL;
@@ -16,6 +16,17 @@ const base = import.meta.env.BASE_URL;
       <code>docs/DEV_PLAN/MONDRIAN/TEAM-ASSIGNMENTS.md</code>. This page is the
       browsable map — seat pages are scaffolds for your Wave A–C work.
     </p>
+
+    <h2>Theory &amp; specs</h2>
+    <ul class="rule-list">
+      {
+        theoryHub.map((link) => (
+          <li>
+            <a href={link.href} rel="noopener noreferrer">{link.label}</a>
+          </li>
+        ))
+      }
+    </ul>
 
     <h2>Everyone</h2>
     <ol class="rule-list">

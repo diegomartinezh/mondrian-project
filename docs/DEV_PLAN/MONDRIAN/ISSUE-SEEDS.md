@@ -12,7 +12,7 @@ Branch naming reminder: `lane/<handle>-issue-<n>-<slug>`
 | Suggested title | Seat | Spec IDs |
 | --- | --- | --- |
 | `[shell] About scenes prose + parallax QA` | 3 | S3-T1, S3-T2, S3-T3, S3-T5 |
-| `[shell] Gallery CSS Grid pedagogy + method page depth` | 4 | S4-T1, S4-T2, S4-T3 |
+| `[shell] Gallery SVG pedagogy + method page depth (D-38)` | 4 | S4-T1, S4-T2, S4-T3 |
 | `[shell] About-us credits + contribute sync` | 5 | S5-T1, S5-T4 |
 | `[design] Token barrel consumption + visual QA checklist` | 7 | U7-T1, U7-T6 · D-34 |
 | `[design] Type specimen / tokens preview page` | 7 | U7-T1 · [`TOKEN-SYSTEM.md`](../../style/TOKEN-SYSTEM.md) |
@@ -31,6 +31,12 @@ Branch naming reminder: `lane/<handle>-issue-<n>-<slug>`
 | `[design] Manifest id/scope + maskable icons` | 7 | D-36 H9 · PHASE-M7 |
 | `[shell] Visitor nav ≤ 5; cohort pages to footer "Project"` | 3 ∩ 7 | D-36 H8 (scaffold close) |
 
+## Wave C — Editor (after M3 DONE)
+
+| Suggested title | Seat | Spec IDs |
+| --- | --- | --- |
+| `[editor] Plane clip chips circle/triangle silhouette lab` | 6 | U6-T7 · D-38 |
+
 ## M4 — Analyzer (parallel)
 
 | Suggested title | Seat | Spec IDs |
@@ -47,5 +53,6 @@ Branch naming reminder: `lane/<handle>-issue-<n>-<slug>`
 | `[measure] <slug> — catalogue + reproduction + rights` | each | U-5 / M8 |
 | `[corpus] Instructor reference 2 (vertical)` | instructor | D-12 |
 | `[corpus] Instructor reference 3 (horizontal)` | instructor | D-12 |
+| `[analyzer] Limit-case note — refuse af Klint Ser III No. 5 (wrong partition)` | 1 ∩ instructor | B1-T3 / M8 triage · [`corpus/REFERENCE-WORKS.md`](corpus/REFERENCE-WORKS.md) § Limit cases |
 
 Full acceptance lines: [`TEAM-ASSIGNMENTS.md`](TEAM-ASSIGNMENTS.md) · handout [`STUDENT-ASSIGNMENT-LIST.md`](STUDENT-ASSIGNMENT-LIST.md).

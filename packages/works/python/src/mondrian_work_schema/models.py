@@ -15,12 +15,18 @@ class AxisPoint(BaseModel):
     position: float = Field(ge=0, le=1)
 
 
+class PlaneClip(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    shape: Literal["rect", "circle", "triangle"]
+
+
 class Rectangle(BaseModel):
     model_config = ConfigDict(extra="forbid")
     id: str
     x: list[str] = Field(min_length=2, max_length=2)
     y: list[str] = Field(min_length=2, max_length=2)
     role: Role
+    clip: PlaneClip | None = None
 
 
 class Line(BaseModel):

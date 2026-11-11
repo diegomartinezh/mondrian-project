@@ -103,6 +103,21 @@ describe("svg", () => {
     expect(svg).toContain('data-kind="line"');
     expect(svg).toContain('data-role="red"');
   });
+
+  it("emits clipPath for circle / triangle plane clips (D-38)", () => {
+    const clipped = structuredClone(valid);
+    const red = clipped.geometry.rectangles.find((r) => r.role === "red");
+    red.clip = { shape: "circle" };
+    const blue = clipped.geometry.rectangles.find((r) => r.role === "blue");
+    blue.clip = { shape: "triangle" };
+    const plan = deriveRenderPlan(clipped, 1);
+    expect(plan.items.find((i) => i.id === red.id).clip.shape).toBe("circle");
+    const svg = renderSvg(plan);
+    expect(svg).toContain("<clipPath");
+    expect(svg).toContain("<circle");
+    expect(svg).toContain("<polygon");
+    expect(svg).toContain(`clip-path="url(#clip-${red.id})"`);
+  });
 });
 
 describe("state / recipe", () => {

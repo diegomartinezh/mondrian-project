@@ -123,6 +123,9 @@ const workObject = z.object({
           x: z.tuple([z.string(), z.string()]),
           y: z.tuple([z.string(), z.string()]),
           role: z.enum(["red", "yellow", "blue", "black", "white", "gray"]),
+          clip: z
+            .object({ shape: z.enum(["rect", "circle", "triangle"]) })
+            .optional(),
         }),
       )
       .min(1),

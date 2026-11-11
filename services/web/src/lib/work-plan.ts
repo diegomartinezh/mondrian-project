@@ -1,7 +1,6 @@
 import {
   deriveRenderPlan,
   deriveVisibleCells,
-  renderGrid,
   wrapTheta,
 } from "@mondrian/matrix";
 
@@ -22,13 +21,9 @@ export function planFromWork(work: WorkDoc, lineWeightScale = 1) {
   return deriveRenderPlan(work, lineWeightScale);
 }
 
-export function gridFromWork(work: WorkDoc, lineWeightScale = 1) {
-  const plan = planFromWork(work, lineWeightScale);
-  return { plan, grid: renderGrid(plan), visible: deriveVisibleCells(plan) };
-}
-
 export function captionStats(work: WorkDoc) {
-  const { plan, visible } = gridFromWork(work);
+  const plan = planFromWork(work);
+  const visible = deriveVisibleCells(plan);
   const cols = plan.xTracks.length;
   const rows = plan.yTracks.length;
   const parts = Object.entries(visible.areaShares)

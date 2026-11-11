@@ -83,6 +83,6 @@ tooling, triage checks and the report.
 
 ## Risks
 
-- Students pick famous excluded works → triage checklist; the brief (M9) repeats the exclusions.
+- Students pick famous excluded works → triage checklist; the brief (M9) repeats the exclusions. Named wrong-partition specimen: Hilma af Klint *Ser III No. 5* (see [`corpus/REFERENCE-WORKS.md`](corpus/REFERENCE-WORKS.md) § Limit cases) — refuse at issue open, do not invent a slug under `works/`.
 - Rights unresolved for a chosen work → the work stays in a `pending-rights/` folder excluded from the build until resolved; it still counts for the student's measurement grade (teaching) but not for publication.
 - Measurement eats the term (pitch risk 43) → time-box per work in the issue; precision recorded.

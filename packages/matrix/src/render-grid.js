@@ -1,4 +1,7 @@
-/** Same plan → CSS Grid model (tracks + placed items). */
+/**
+ * Same plan → CSS Grid model (tracks + placed items).
+ * D-38: product UI is SVG-only; keep for conformance/pedagogy tests, not shell paint.
+ */
 
 /**
  * @param {object} plan

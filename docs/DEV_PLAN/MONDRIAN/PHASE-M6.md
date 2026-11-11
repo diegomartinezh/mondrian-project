@@ -11,6 +11,22 @@ is the print stage; **format chips** (D-31) maximise the frame in
 printableArea; liquid-fill (D-30); free-aspect corners → `fmt=custom`;
 catalog variations; live **URL Recipe** (`fmt` included); Print giveaway.
 Inline SVG in a Svelte 5 island. No internal edge drag. No FastAPI.
+Gallery/shell also SVG-only ([D-38](DECISIONS/D38-2026-11-11-SVG-ONLY-PLANE-CLIP.md)).
+
+## Micro-interactions (from SVG master session)
+
+Steal the **master idea**, not the showreel stack
+(`web-atelier` [SVG Animation Master Session](https://ruvebal.github.io/web-atelier-udit/lessons/en/web-animations/svg-master-session/)):
+
+| Bring | Editor use |
+| --- | --- |
+| Who owns time / space / pixels | Svelte owns chrome state; SVG owns pixels; CSS owns `--theta` / fills |
+| Native first (CSS / WAAPI) | Handle hover/focus, chip press, theta scrub — no GSAP in editor (D-29 = About only) |
+| Reduced-motion + no-JS | Attract (M7) and chrome motion kill under `prefers-reduced-motion` |
+| Facet / path click games | **Forbidden** on measured planes/lines (Addendum B). Gamify frame, format chips, variation, theta, compare, **clip chips** |
+| Rive / Lottie / Three / Canvas 2.5D | Landing mark only — never inside the painting |
+
+**Plane clip lab (U6-T7 / D-38):** chips apply `clip.shape` ∈ {`rect`,`circle`,`triangle`} to AABB planes via `<rect>` + `<clipPath>`. Pedagogical silhouette (why Ser III No. 5 cannot be neoplastic YAML) — not a corpus ingest path.
 
 ## Deliverables
 
@@ -28,7 +44,7 @@ Inline SVG in a Svelte 5 island. No internal edge drag. No FastAPI.
   original, mirror H/V, rotate 180°, invert rank, complement, reciprocal,
   equalize, invert contrast.
 - Pedagogical extras: hue; palette inversion; line-weight; undo, reset,
-  press-and-hold compare.
+  press-and-hold compare; **plane clip chips** (rect/circle/triangle).
 - Pointer capture on frame corners; ≥44 px targets. Format chips **and**
   free corner-drag are both MVP; chips shortcut common ratios, corners
   keep arbitrary free format (`fmt=custom`).

@@ -16,6 +16,20 @@ body:
       description: Named catalogue dimensions; reproduction pixel size and crop
     validations:
       required: true
+  - type: checkboxes
+    id: triage
+    attributes:
+      label: D-12 / digitalization triage (must all hold before measuring)
+      description: Limit cases live in docs/DEV_PLAN/MONDRIAN/corpus/REFERENCE-WORKS.md § Limit cases. Named refuse specimen — Hilma af Klint Ser III No. 5 (1920; HaK480) — circles/triangles/symbols ≠ H/V black armature.
+      options:
+        - label: Orthogonal black armature + planar colour (not lozenge / coloured-line / Boogie Woogie / multi-grey / Cubist-transition)
+          required: true
+        - label: Not a spiritual-geometry / all-over drip wrong-partition work (e.g. not af Klint Ser III No. 5; not Sobel drip)
+          required: true
+        - label: Will not invent proportions or commit museum photographs
+          required: true
+    validations:
+      required: true
   - type: dropdown
     id: rights
     attributes:

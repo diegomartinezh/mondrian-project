@@ -54,16 +54,23 @@ export function deriveRenderPlan(work, lineWeightScale = 1) {
   const xTracks = tracksFromEdges(collectEdges(work, map, scale, "x"));
   const yTracks = tracksFromEdges(collectEdges(work, map, scale, "y"));
 
-  const planes = work.geometry.rectangles.map((r) => ({
-    kind: "plane",
-    id: r.id,
-    role: r.role,
-    x0: map.x.get(r.x[0]),
-    x1: map.x.get(r.x[1]),
-    y0: map.y.get(r.y[0]),
-    y1: map.y.get(r.y[1]),
-    z: 0,
-  }));
+  const planes = work.geometry.rectangles.map((r) => {
+    const item = {
+      kind: "plane",
+      id: r.id,
+      role: r.role,
+      x0: map.x.get(r.x[0]),
+      x1: map.x.get(r.x[1]),
+      y0: map.y.get(r.y[0]),
+      y1: map.y.get(r.y[1]),
+      z: 0,
+    };
+    // D-38: optional silhouette inside AABB; absent ≡ rect.
+    if (r.clip?.shape && r.clip.shape !== "rect") {
+      item.clip = { shape: r.clip.shape };
+    }
+    return item;
+  });
 
   const lines = work.geometry.lines.map((ln) => {
     const c = centerPos(map, ln);

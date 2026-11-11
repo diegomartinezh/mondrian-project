@@ -64,6 +64,7 @@ needed — this draw is provisional, not locked.
 | B1-T3 | Classical analyzer: points / planes / lines → `work.yml` draft with uncertainty fields; evaluation report against labelled cells. | M4 |
 | B1-T4 | Closed-form weight variations (`invert_rank`, `complement`, `reciprocal`, `equalize`) with sum-to-frame invariant tests. | M2/M4 |
 | B1-T5 | Personal measured work under `packages/works/<slug>/` with rights + method notes. | M8 |
+| B1-T6 | Document one **limit-case refuse** for the digitalization lane: Hilma af Klint *Ser III No. 5* (1920; HaK480) — abstract/geometric yet not H/V + rectangle partition. Note lives under corpus triage ([`corpus/REFERENCE-WORKS.md`](corpus/REFERENCE-WORKS.md) § Limit cases); no `work.yml`, no photo in git. | M4/M8 |
 
 **Starter already in pack:** schema draft + catalog sketch under `scaffold/`.
 
@@ -114,7 +115,7 @@ LAN service · M7 “no Pages→API” gate · Phase-2 generate (post-MVP).
 
 | ID | Spec | Phase |
 | --- | --- | --- |
-| S4-T1 | Gallery miniatures are **CSS Grid** from the shared render plan (not screenshots of SVG). | M3 |
+| S4-T1 | Gallery miniatures are **inline SVG** from the shared render plan (D-38; not CSS Grid cells, not screenshots). | M3 |
 | S4-T2 | `/method/` explains analyzer → schema → catalog build → uncertainty → rights. | M3 |
 | S4-T3 | Container queries reveal chrome/captions; painting study stays ratio-true. | M3 |
 | S4-T4 | Personal measured work. | M8 |
@@ -144,6 +145,7 @@ LAN service · M7 “no Pages→API” gate · Phase-2 generate (post-MVP).
 | U6-T4 | Internal dividers/junctions are **not** draggable (Addendum B / D-24). | M6 |
 | U6-T5 | Undo, reset, compare; **live URL sync** (every UI edit → query params); `localStorage` draft. | M6 |
 | U6-T6 | Personal measured work + defence of one interaction bound. | M8/M9 |
+| U6-T7 | Plane **clip** chips (`rect` / `circle` / `triangle`) via SVG `clipPath` on AABB planes (D-38). Silhouette lab only — never promote Ser III No. 5 (or other wrong-armature works) into `work.yml`. Micro-interactions per PHASE-M6 § Micro-interactions + svg-master-session. | M6 |
 
 ---
 

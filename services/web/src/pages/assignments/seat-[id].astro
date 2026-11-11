@@ -15,6 +15,10 @@ if (!seat) {
 }
 
 const base = import.meta.env.BASE_URL;
+
+function hrefFor(link: { href: string }) {
+  return link.href.startsWith("/") ? withBase(link.href, base) : link.href;
+}
 ---
 <ShellLayout title={`Seat ${seat.id} — ${seat.title}`} current="assignments" noindex>
   <ScaffoldBanner seat={seat.id} handle={seat.handle} title="Seat scaffold" />
@@ -41,10 +45,44 @@ const base = import.meta.env.BASE_URL;
       }
     </ul>
 
+    <h2>Theory lessons</h2>
+    <ul class="rule-list">
+      {
+        seat.lessons.map((link) => (
+          <li>
+            <a href={hrefFor(link)}>{link.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Official docs</h2>
+    <ul class="rule-list">
+      {
+        seat.docs.map((link) => (
+          <li>
+            <a href={link.href} rel="noopener noreferrer">{link.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>GitHub assignment spec</h2>
+    <ul class="rule-list">
+      {
+        seat.specs.map((link) => (
+          <li>
+            <a href={link.href} rel="noopener noreferrer">{link.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+
     <h2>Integrate here</h2>
     <p>
       These routes are live scaffolds. Replace stubs with your deliverable; keep
-      chrome on <code>--nx-*</code> tokens.
+      chrome on <code>--nx-*</code> tokens. Gallery and editor share one SVG plan
+      (D-38) — not CSS Grid cells.
     </p>
     <ul class="rule-list">
       {

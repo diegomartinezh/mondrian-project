@@ -1,6 +1,7 @@
 ---
 import type { WorkDoc } from "../lib/work-plan";
-import { gridFromWork, swatchCssVars } from "../lib/work-plan";
+import { planFromWork, swatchCssVars } from "../lib/work-plan";
+import { renderSvg } from "@mondrian/matrix";
 
 interface Props {
   work: WorkDoc;
@@ -9,34 +10,18 @@ interface Props {
 }
 
 const { work, compact = false, paperRatio } = Astro.props;
-const { grid } = gridFromWork(work);
+const plan = planFromWork(work);
+const svg = renderSvg(plan);
 const ratio =
   paperRatio ??
   (work.canvas.width > 0 ? work.canvas.width / work.canvas.height : 1);
+const label = `Geometric study after ${work.title} (${work.year})`;
 ---
 <figure class:list={["study", compact && "gallery-mini"]} style={swatchCssVars(work)}>
   <div class="study__stage">
     <div class="study__paper" style={`--paper-ratio: ${ratio}`}>
       <div class="study__frame" data-study-frame>
-        <div
-          class="study__grid"
-          data-study-grid
-          style={`display:grid; grid-template-columns:${grid.gridTemplateColumns}; grid-template-rows:${grid.gridTemplateRows};`}
-          role="img"
-          aria-label={`Geometric study after ${work.title} (${work.year})`}
-        >
-          {
-            grid.items.map((it) => (
-              <div
-                class={it.kind === "line" ? "line plane" : "plane"}
-                data-kind={it.kind}
-                data-role={it.role}
-                data-id={it.id}
-                style={`grid-column: ${it.column.start} / ${it.column.end}; grid-row: ${it.row.start} / ${it.row.end}; z-index: ${it.zIndex};`}
-              />
-            ))
-          }
-        </div>
+        <div class="study__svg" data-study-svg set:html={svg} aria-label={label} />
       </div>
     </div>
   </div>

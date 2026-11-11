@@ -3,10 +3,10 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 import { describe, expect, it } from "vitest";
+import { deriveRenderPlan, renderSvg } from "@mondrian/matrix";
 import {
   captionStats,
   deltaSentence,
-  gridFromWork,
   type WorkDoc,
 } from "../src/lib/work-plan";
 
@@ -19,10 +19,11 @@ const work = parseYaml(
 ) as WorkDoc;
 
 describe("work-plan", () => {
-  it("builds a CSS Grid model with plane and line items", () => {
-    const { grid } = gridFromWork(work);
-    expect(grid.items.some((i) => i.kind === "plane")).toBe(true);
-    expect(grid.items.some((i) => i.kind === "line")).toBe(true);
+  it("builds an SVG study with plane and line items", () => {
+    const plan = deriveRenderPlan(work, 1);
+    const svg = renderSvg(plan);
+    expect(svg).toContain('data-kind="plane"');
+    expect(svg).toContain('data-kind="line"');
   });
 
   it("caption partition sums roles", () => {

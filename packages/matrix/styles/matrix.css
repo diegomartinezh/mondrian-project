@@ -1,4 +1,6 @@
-/* Role → colour via custom properties. Lines use --black, never a literal. */
+/* Role → colour via custom properties. Lines use --black, never a literal.
+ * D-07: prefer relative colour when supported; always keep a classic hsl()
+ * fallback — Chromium-embedded / some Safari builds reject hsl(from …). */
 
 @property --theta {
   syntax: "<angle>";
@@ -21,39 +23,79 @@
   --gray: #9a9a9a;
   --line-weight-scale: 1;
   --theta: 0deg;
+  --theta-num: 0;
 }
 
 .plane[data-role="red"] {
   fill: hsl(
-    from hsl(var(--swatch-red-h) var(--swatch-red-s) var(--swatch-red-l))
-      calc(h + var(--theta)) s l
+    calc(var(--swatch-red-h) + var(--theta-num, 0)) var(--swatch-red-s)
+      var(--swatch-red-l)
   );
   background: hsl(
-    from hsl(var(--swatch-red-h) var(--swatch-red-s) var(--swatch-red-l))
-      calc(h + var(--theta)) s l
+    calc(var(--swatch-red-h) + var(--theta-num, 0)) var(--swatch-red-s)
+      var(--swatch-red-l)
   );
 }
 
 .plane[data-role="yellow"] {
   fill: hsl(
-    from hsl(var(--swatch-yellow-h) var(--swatch-yellow-s) var(--swatch-yellow-l))
-      calc(h + var(--theta)) s l
+    calc(var(--swatch-yellow-h) + var(--theta-num, 0)) var(--swatch-yellow-s)
+      var(--swatch-yellow-l)
   );
   background: hsl(
-    from hsl(var(--swatch-yellow-h) var(--swatch-yellow-s) var(--swatch-yellow-l))
-      calc(h + var(--theta)) s l
+    calc(var(--swatch-yellow-h) + var(--theta-num, 0)) var(--swatch-yellow-s)
+      var(--swatch-yellow-l)
   );
 }
 
 .plane[data-role="blue"] {
   fill: hsl(
-    from hsl(var(--swatch-blue-h) var(--swatch-blue-s) var(--swatch-blue-l))
-      calc(h + var(--theta)) s l
+    calc(var(--swatch-blue-h) + var(--theta-num, 0)) var(--swatch-blue-s)
+      var(--swatch-blue-l)
   );
   background: hsl(
-    from hsl(var(--swatch-blue-h) var(--swatch-blue-s) var(--swatch-blue-l))
-      calc(h + var(--theta)) s l
+    calc(var(--swatch-blue-h) + var(--theta-num, 0)) var(--swatch-blue-s)
+      var(--swatch-blue-l)
   );
+}
+
+@supports (color: hsl(from red calc(h + 10deg) s l)) {
+  .plane[data-role="red"] {
+    fill: hsl(
+      from hsl(var(--swatch-red-h) var(--swatch-red-s) var(--swatch-red-l))
+        calc(h + var(--theta)) s l
+    );
+    background: hsl(
+      from hsl(var(--swatch-red-h) var(--swatch-red-s) var(--swatch-red-l))
+        calc(h + var(--theta)) s l
+    );
+  }
+
+  .plane[data-role="yellow"] {
+    fill: hsl(
+      from hsl(
+          var(--swatch-yellow-h) var(--swatch-yellow-s) var(--swatch-yellow-l)
+        )
+        calc(h + var(--theta)) s l
+    );
+    background: hsl(
+      from hsl(
+          var(--swatch-yellow-h) var(--swatch-yellow-s) var(--swatch-yellow-l)
+        )
+        calc(h + var(--theta)) s l
+    );
+  }
+
+  .plane[data-role="blue"] {
+    fill: hsl(
+      from hsl(var(--swatch-blue-h) var(--swatch-blue-s) var(--swatch-blue-l))
+        calc(h + var(--theta)) s l
+    );
+    background: hsl(
+      from hsl(var(--swatch-blue-h) var(--swatch-blue-s) var(--swatch-blue-l))
+        calc(h + var(--theta)) s l
+    );
+  }
 }
 
 .plane[data-role="black"] {

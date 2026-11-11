@@ -13,6 +13,8 @@ function readTheta() {
 
 function applyTheta(root, theta) {
   root.style.setProperty("--theta", `${theta}deg`);
+  // Unitless companion for classic hsl() fallback (D-07 when relative colour fails).
+  root.style.setProperty("--theta-num", String(theta));
   const caption = document.querySelector("[data-study-caption]");
   if (!caption) return;
   caption.dataset.theta = String(theta);

@@ -240,6 +240,18 @@
         "role": {
           "type": "string",
           "enum": ["red", "yellow", "blue", "black", "white", "gray"]
+        },
+        "clip": {
+          "description": "Optional silhouette mask inside the AABB (D-38). Absent ≡ rect. Not a freeform path schema.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["shape"],
+          "properties": {
+            "shape": {
+              "type": "string",
+              "enum": ["rect", "circle", "triangle"]
+            }
+          }
         }
       }
     },

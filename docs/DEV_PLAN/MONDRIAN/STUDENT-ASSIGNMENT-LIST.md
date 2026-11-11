@@ -31,7 +31,7 @@ Distilled from TEAM-ASSIGNMENTS.md · 9 November 2026
 4. Measure **one** work in **M8** (`work.yml` + `MEASUREMENT.md` + rights).  
 5. Defend **one** bound in **M9**.
 
-**Never:** museum photos in git · FastAPI from Pages/kiosk · Svelte outside editor routes · invented proportions · SVG/work JSON in URL query.
+**Never:** museum photos in git · FastAPI from Pages/kiosk · Svelte outside editor routes · invented proportions · SVG/work JSON in URL query · encoding a wrong-partition “looks geometric” work as `work.yml` (named limit case: Hilma af Klint *Ser III No. 5* — see [`corpus/REFERENCE-WORKS.md`](corpus/REFERENCE-WORKS.md) § Limit cases).
 
 ---
 
@@ -42,7 +42,7 @@ Instructor opens [`PHASE-M3.md`](PHASE-M3.md). **No Svelte island** on these rou
 | Seat | Handle | Tasks (IDs) | Outcome |
 | --- | --- | --- | --- |
 | **3** About | `medinaxd29` | S3-T1, S3-T2, S3-T3, S3-T5 | Seven About scenes; GSAP parallax on `/about/` only; reduced-motion / no-JS complete; safe cites |
-| **4** Gallery / method | `Yassin-Skirej` | S4-T1, S4-T2, S4-T3 | Live CSS Grid gallery; `/method/` (no JS); container-query chrome |
+| **4** Gallery / method | `Yassin-Skirej` | S4-T1, S4-T2, S4-T3 | Live **SVG** gallery (D-38); `/method/` (no JS); container-query chrome |
 | **5** About-us / contribute | `itzy-4Qunn7` | S5-T1, S5-T4 | `/about-us/` credits + research/AI notice; `/contribute/` lanes |
 | **7** Tokens (slice) | `PauLAanDReEa-Ai` | U7-T1, U7-T6 | Token barrel + type specimen preview ([`TOKEN-SYSTEM.md`](../../style/TOKEN-SYSTEM.md), D-34); visual QA on chrome PRs |
 
@@ -54,7 +54,7 @@ Shared M3 gates: Playwright fit + θ fallbacks; axe clean; base-aware URLs; no p
 
 | Seat | Handle | Focus |
 | --- | --- | --- |
-| **1** Analyzer | `ATIaas` | M4 analyzer + evaluation; M8 personal work; weight remaps only with closed-form proofs |
+| **1** Analyzer | `ATIaas` | M4 analyzer + evaluation; M8 personal work; weight remaps only with closed-form proofs; B1-T6 limit-case refuse (*Ser III No. 5*) |
 | **2** Contract / API | `diegomartinezh` | Conformance ownership; M5 LAN API; prove Pages never fetches API |
 
 ---
@@ -63,7 +63,7 @@ Shared M3 gates: Playwright fit + θ fallbacks; axe clean; base-aware URLs; no p
 
 | Seat | Handle | Focus |
 | --- | --- | --- |
-| **6** Editor | `galarp2005` | M6 Svelte+SVG `/create/` + `/kiosk/`; liquid-fill; format chips; live URL; no node drag |
+| **6** Editor | `galarp2005` | M6 Svelte+SVG `/create/` + `/kiosk/`; liquid-fill; format chips; **plane clip lab** (U6-T7); live URL; no node drag · see [`PHASE-M6.md`](PHASE-M6.md) § Micro-interactions + D-38 |
 | **7** Export / PWA | `PauLAanDReEa-Ai` | M6 export/print/QR recipe URL; M7 PWA offline + wake lock |
 
 ---

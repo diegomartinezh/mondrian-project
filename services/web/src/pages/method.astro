@@ -40,11 +40,14 @@ import ScaffoldBanner from "../components/ScaffoldBanner.astro";
       do not call FastAPI.
     </p>
 
-    <h2>5. Dual render</h2>
+    <h2>5. SVG render (D-38)</h2>
     <p>
-      One render plan serialises to CSS Grid (gallery / About pedagogy) and SVG
-      (editor / export). Planes sit below lines; thickness comes from derived
-      geometry only.
+      One render plan paints as inline SVG everywhere in the product UI
+      (gallery, About, editor, export). Planes sit below lines; thickness comes
+      from derived geometry only. Optional <code>clip.shape</code>
+      (rect / circle / triangle) masks the AABB via <code>clipPath</code> for
+      silhouette pedagogy — neoplastic catalog works stay rectangular unless
+      clipped in the editor lab.
     </p>
 
     <h2>6. Uncertainty and rights</h2>

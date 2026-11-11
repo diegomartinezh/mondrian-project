@@ -40,8 +40,9 @@ def derive_render_plan(
     xm, ym = _maps(work)
     x_tracks = _tracks(_edges(work, xm, ym, scale, "x"))
     y_tracks = _tracks(_edges(work, xm, ym, scale, "y"))
-    planes = [
-        {
+    planes = []
+    for r in work["geometry"]["rectangles"]:
+        item = {
             "kind": "plane",
             "id": r["id"],
             "role": r["role"],
@@ -51,8 +52,11 @@ def derive_render_plan(
             "y1": ym[r["y"][1]],
             "z": 0,
         }
-        for r in work["geometry"]["rectangles"]
-    ]
+        clip = r.get("clip") or {}
+        shape = clip.get("shape")
+        if shape and shape != "rect":
+            item["clip"] = {"shape": shape}
+        planes.append(item)
     lines = []
     for ln in work["geometry"]["lines"]:
         c = _center(xm, ym, ln)
