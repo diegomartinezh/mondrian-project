@@ -2,6 +2,14 @@
 
 **Product marque:** Neoplastix · **Programme / repo:** Mondrian Project · D-33 (cascade `DECISIONS/D33-2026-11-09-NEOPLASTIX-MARQUE.md`)
 
+## How to start (stack + Web Atelier)
+
+Before your first PR, read
+[`docs/guides/stack-fundamentals.md`](docs/guides/stack-fundamentals.md): local
+`pnpm develop`, what Astro / Vite / Svelte / matrix each own, and which
+[Web Atelier](https://ruvebal.github.io/web-atelier-udit/) FE I / FE II lessons
+teach them (S9 modules, S11 GSAP+SVG, S15 frameworks/Vite, FE II Astro units).
+
 ## Sync before you branch
 
 1. `git fetch origin && git checkout main && git pull --ff-only`
@@ -41,6 +49,16 @@ A branch created before current `main` fails the sync preflight — rebase or re
 | **Design** | `packages/tokens/`, export/print/PWA | Seat 7 |
 
 Svelte stays in `packages/editor`. Schema/matrix PRs need Analyzer and Editor human approval.
+
+### Geometry contract (do not reverse)
+
+`packages/works/schema/work.schema.json` is the single source. **Python does not
+generate TypeScript interfaces.** Zod and pydantic are hand-written mirrors;
+`scripts/conformance.sh` requires Ajv + JS semantic + zod + pydantic agreement
+and identical JS/Python render plans. “Derived” = geometry plan from `work.yml`,
+not codegen. Optional `rectangles[].clip.shape` (`rect`|`circle`|`triangle`) is
+a silhouette lab mask (D-38), not freeform paths — details in
+[`packages/works/schema/README.md`](packages/works/schema/README.md).
 
 ## Plan before code
 
