@@ -36,7 +36,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) and the in-app [/contribute/](https://ne
 
 | Person | Role |
 | --- | --- |
-| diegomartinezh | API |
+| [diegomartinezh](https://github.com/diegomartinezh) | API |
 
 ## Redeploy Pages
 
