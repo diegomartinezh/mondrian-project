@@ -32,6 +32,12 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) and the in-app [/contribute/](https://ne
 | Editor | Svelte+SVG island, create/kiosk |
 | Design | Tokens, export, print, PWA |
 
+## Front End Cohorts
+
+| Person | Role |
+| --- | --- |
+| Diego Martinez | API |
+
 ## Redeploy Pages
 
 ```bash
