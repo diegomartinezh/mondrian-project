@@ -64,11 +64,35 @@
 }
 
 .shell-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   max-width: 72rem;
   margin-inline: auto;
   padding: 1rem 1.25rem 2rem;
   color: var(--mp-color-muted);
   font-size: var(--mp-text-sm, 0.875rem);
+}
+
+.shell-footer p {
+  margin: 0;
+}
+
+.shell-footer__repo {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: inherit;
+  opacity: 0.85;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.shell-footer__repo:hover,
+.shell-footer__repo:focus-visible {
+  opacity: 1;
 }
 
 .prose {
