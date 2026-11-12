@@ -5,8 +5,9 @@
 ## How to start (stack + Web Atelier)
 
 Before your first PR, read
-[`docs/guides/stack-fundamentals.md`](docs/guides/stack-fundamentals.md): local
-`pnpm develop`, what Astro / Vite / Svelte / matrix each own, and which
+[stack fundamentals](https://github.com/ruvebal/mondrian-project/blob/main/docs/guides/stack-fundamentals.md)
+(`docs/guides/stack-fundamentals.md` in the clone): local `pnpm develop`, what
+Astro / Vite / Svelte / matrix each own, and which
 [Web Atelier](https://ruvebal.github.io/web-atelier-udit/) FE I / FE II lessons
 teach them (S9 modules, S11 GSAP+SVG, S15 frameworks/Vite, FE II Astro units).
 
@@ -57,8 +58,8 @@ generate TypeScript interfaces.** Zod and pydantic are hand-written mirrors;
 `scripts/conformance.sh` requires Ajv + JS semantic + zod + pydantic agreement
 and identical JS/Python render plans. “Derived” = geometry plan from `work.yml`,
 not codegen. Optional `rectangles[].clip.shape` (`rect`|`circle`|`triangle`) is
-a silhouette lab mask (D-38), not freeform paths — details in
-[`packages/works/schema/README.md`](packages/works/schema/README.md).
+a silhouette lab mask (D-38), not freeform paths — details in the
+[schema README](https://github.com/ruvebal/mondrian-project/blob/main/packages/works/schema/README.md).
 
 ## Plan before code
 
@@ -70,4 +71,5 @@ Assisted work requires the AI Review Log in the PR template. Assistant-run check
 
 ## Review tooling
 
-Instructors: `make review-queue` (read-only) and `make review-pr PR=<n>` — local Ollama comments only (`MUST FIX` / `NIT`). See `docs/guides/reviewing-cohort-prs.md`.
+Instructors: `make review-queue` (read-only) and `make review-pr PR=<n>` — local Ollama comments only (`MUST FIX` / `NIT`). See
+[reviewing cohort PRs](https://github.com/ruvebal/mondrian-project/blob/main/docs/guides/reviewing-cohort-prs.md).
